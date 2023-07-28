@@ -1,0 +1,2375 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+    <asset>
+        <contributor>
+            <authoring_tool>modo 501 [Build 40846], Microsoft Windows 7 (6.1.7600)</authoring_tool>
+            <comments>
+                Plug-in: [Build 40846];
+                Use Absolute Path: No;
+                Merge Reference Items: No;
+                Save Hidden Items: Yes;
+                Save Cameras: Yes;
+                Save Lights: Yes;
+                Save Locators: Yes;
+                Save Triangles as Triangles: No;
+                Bake Matrices: No;
+                Save Vertex Normals: Yes;
+                Save UV Texture Coordinates: Yes;
+                Save Vertex Colors: Yes;
+                Save Vertex Weights: Yes;
+                Save Animation: Yes;
+                Sample Animation: No;
+                Sample Animation Start: 0;
+                Sample Animation End: 120;
+                Save modo Profile: Yes;
+                Save Maya Profile: Yes;
+                Save 3ds Max Profile: Yes;
+                Formatted Arrays: Yes;
+            </comments>
+            <source_data>file:///D:/3d/3d-daten/3D/3D-Objekte/medieval%20fantasy/all_textures/v3_house3_LOD2.lxo</source_data>
+        </contributor>
+        <created>2011-03-05T11:31:29Z</created>
+        <modified>2011-03-05T11:31:29Z</modified>
+        <up_axis>Y_UP</up_axis>
+    </asset>
+    <library_cameras>
+        <camera id="Camera-Camera" name="Camera">
+            <optics>
+                <technique_common>
+                    <perspective>
+                        <xfov sid="HFOV">39.5978</xfov>
+                        <yfov sid="YFOV">26.9915</yfov>
+                        <znear sid="near_clip">0.01</znear>
+                        <zfar sid="far_clip">10000</zfar>
+                    </perspective>
+                </technique_common>
+                <technique profile="modo401">
+                    <param sid="projType" name="Projection_Type" type="Name">persp</param>
+                    <param sid="focalLen" name="Focal_Length" type="float">0.05</param>
+                    <param sid="distort" name="Lens_Distortion" type="float">0</param>
+                    <param sid="squeeze" name="Lens_Squeeze" type="float">1</param>
+                    <param sid="focusDist" name="Focus_Distance" type="float">4</param>
+                    <param sid="fStop" name="F-Stop" type="float">4</param>
+                    <param sid="blurLen" name="Blur_Length" type="float">0.5</param>
+                    <param sid="blurOff" name="Blur_Offset" type="float">0</param>
+                    <param sid="ioDist" name="Interocular_Distance" type="float">0.065</param>
+                    <param sid="convDist" name="Convergence_Distance" type="float">2</param>
+                </technique>
+            </optics>
+            <imager>
+                <technique profile="modo401">
+                    <param sid="apertureX" name="Film_Width" type="float">0.036</param>
+                    <param sid="apertureY" name="Film_Height" type="float">0.024</param>
+                    <param sid="offsetX" name="Film_Offset_X" type="float">0</param>
+                    <param sid="offsetY" name="Film_Offset_Y" type="float">0</param>
+                    <param sid="filmFit" name="Film_Fit" type="Name">fill</param>
+                </technique>
+            </imager>
+        </camera>
+    </library_cameras>
+    <library_images>
+        <image id="Image0001" name="Image0001">
+            <init_from>../all_textures/WoodPlanks.tga</init_from>
+        </image>
+        <image id="Image0002" name="Image0002">
+            <init_from>../all_textures/bricks_old_02.tga</init_from>
+        </image>
+        <image id="Image0003" name="Image0003">
+            <init_from>../all_textures/cloth_001_c.tga</init_from>
+        </image>
+        <image id="Image0004" name="Image0004">
+            <init_from>../all_textures/con_dirt_01.tga</init_from>
+        </image>
+        <image id="Image0005" name="Image0005">
+            <init_from>../all_textures/doorwindow_set.tga</init_from>
+        </image>
+        <image id="Image0006" name="Image0006">
+            <init_from>../all_textures/roof_01.tga</init_from>
+        </image>
+    </library_images>
+    <library_materials>
+        <material id="Material-bricks_old06" name="bricks_old06">
+            <instance_effect url="#Effect-bricks_old06" />
+        </material>
+        <material id="Material-cloth_001_c" name="cloth_001_c">
+            <instance_effect url="#Effect-cloth_001_c" />
+        </material>
+        <material id="Material-con_dirt_01" name="con_dirt_01">
+            <instance_effect url="#Effect-con_dirt_01" />
+        </material>
+        <material id="Material-doorwindow_set" name="doorwindow_set">
+            <instance_effect url="#Effect-doorwindow_set" />
+        </material>
+        <material id="Material-roof_01" name="roof_01">
+            <instance_effect url="#Effect-roof_01" />
+        </material>
+        <material id="Material-woodPlanks" name="woodPlanks">
+            <instance_effect url="#Effect-woodPlanks" />
+        </material>
+    </library_materials>
+    <library_effects>
+        <effect id="Effect-bricks_old06" name="bricks_old06">
+            <profile_COMMON>
+                <newparam sid="Image0002-surface">
+                    <surface type="2D">
+                        <init_from>Image0002</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0002-sampler">
+                    <sampler2D>
+                        <source>Image0002-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0002-sampler" texcoord="Texture" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-cloth_001_c" name="cloth_001_c">
+            <profile_COMMON>
+                <newparam sid="Image0003-surface">
+                    <surface type="2D">
+                        <init_from>Image0003</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0003-sampler">
+                    <sampler2D>
+                        <source>Image0003-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0003-sampler" texcoord="Texture" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-con_dirt_01" name="con_dirt_01">
+            <profile_COMMON>
+                <newparam sid="Image0004-surface">
+                    <surface type="2D">
+                        <init_from>Image0004</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0004-sampler">
+                    <sampler2D>
+                        <source>Image0004-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0004-sampler" texcoord="Texture" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-doorwindow_set" name="doorwindow_set">
+            <profile_COMMON>
+                <newparam sid="Image0005-surface">
+                    <surface type="2D">
+                        <init_from>Image0005</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0005-sampler">
+                    <sampler2D>
+                        <source>Image0005-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0005-sampler" texcoord="Texture" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-roof_01" name="roof_01">
+            <profile_COMMON>
+                <newparam sid="Image0006-surface">
+                    <surface type="2D">
+                        <init_from>Image0006</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0006-sampler">
+                    <sampler2D>
+                        <source>Image0006-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0006-sampler" texcoord="Texture" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+        <effect id="Effect-woodPlanks" name="woodPlanks">
+            <profile_COMMON>
+                <newparam sid="Image0001-surface">
+                    <surface type="2D">
+                        <init_from>Image0001</init_from>
+                        <format>A8R8G8B8</format>
+                    </surface>
+                </newparam>
+                <newparam sid="Image0001-sampler">
+                    <sampler2D>
+                        <source>Image0001-surface</source>
+                        <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+                        <magfilter>LINEAR</magfilter>
+                    </sampler2D>
+                </newparam>
+                <technique sid="common">
+                    <phong>
+                        <diffuse>
+                            <texture texture="Image0001-sampler" texcoord="Texture" />
+                        </diffuse>
+                        <specular>
+                            <color sid="specular_effect_rgb">0.2 0.2 0.2 1</color>
+                        </specular>
+                    </phong>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
+    <library_geometries>
+        <geometry id="Geometry-roof_01" name="roof_01">
+            <mesh>
+                <source id="Geometry-roof_01-positions" name="positions">
+                    <float_array id="Geometry-roof_01-positions-array" count="141">
+                        2.99312 6.73273 2.5716
+                        -0.111766 7.36217 2.1184
+                        2.46133 5.70758 3.25793
+                        2.99312 6.73273 -0.624312
+                        2.46133 5.70758 0.0580998
+                        -0.111776 7.3234 -1.08141
+                        -0.111776 7.3234 2.11841
+                        2.46133 5.70758 -2.35355
+                        3.27331 7.07165 -1.44343
+                        -0.111772 5.70758 -2.35355
+                        -0.111766 7.34878 -1.22338
+                        -0.111766 7.36217 -1.08142
+                        0.163351 7.8292 0.457548
+                        2.11008 6.10285 4.52467
+                        0.17287 7.95635 -4.83699
+                        -2.97096 5.24614 4.5244
+                        -0.189953 7.90698 4.52651
+                        -2.97096 5.24614 -3.13665
+                        2.51821 5.62548 4.53361
+                        0.163374 7.76868 0.457562
+                        1.3328 6.81349 -3.87945
+                        -0.186395 7.74777 0.457562
+                        -2.46067 5.59694 -2.67836
+                        -2.46067 5.59694 3.45977
+                        0 7.97207 -2.67836
+                        2.46067 5.61773 -2.67836
+                        2.46067 5.61773 3.45977
+                        0 7.97207 3.45977
+                        -1.55911 6.59699 -3.87945
+                        -0.194952 7.86912 -4.83697
+                        0.152171 7.9431 4.52651
+                        2.51823 5.59242 -3.45789
+                        -0.186419 7.80829 0.457548
+                        -0.194976 7.93524 -4.83699
+                        2.10274 6.10987 -3.53127
+                        3.57406 7.44362 -1.07756
+                        -0.111772 5.70579 0.0580998
+                        3.57406 7.4301 -1.22686
+                        -0.111776 7.31001 -1.22338
+                        3.27331 7.07165 1.73559
+                        -0.111776 7.31001 1.97645
+                        2.46133 5.70758 0.846273
+                        3.57406 7.42244 2.12227
+                        3.57406 7.4301 1.97297
+                        -0.111766 7.34878 1.97644
+                        -0.111772 5.70579 3.25793
+                        3.27331 7.12573 2.33279
+                    </float_array>
+                    <technique_common>
+                        <accessor count="47" source="#Geometry-roof_01-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-roof_01-normals" name="normals">
+                    <float_array id="Geometry-roof_01-normals-array" count="126">
+                        -0.00768313 0.559054 0.829096
+                        0.0155228 -0.559628 -0.828599
+                        0.0140072 -0.561274 -0.827511
+                        0 -0.555016 0.83184
+                        -0.00821114 0.558375 -0.829548
+                        -0.00922018 0.557413 0.830184
+                        0.640134 0.768014 0.0195948
+                        -0.691323 0.722546 0
+                        -0.660754 -0.750492 -0.0128758
+                        0.691024 -0.722256 0.0288644
+                        -0.69449 0.719502 0
+                        0.691323 0.722546 0
+                        0.668303 -0.743889 0
+                        0.684675 -0.728472 -0.0234145
+                        0.675115 -0.737493 -0.0179949
+                        -0.69025 -0.723072 -0.026868
+                        -0.699515 -0.714042 0.0286834
+                        -0.717995 -0.696043 0.00287835
+                        -0.687214 0.726308 0.014653
+                        -0.693579 0.720146 0.0183885
+                        -0.663806 0.74767 -0.01871
+                        0.684748 0.728545 -0.018513
+                        0.760093 0.649809 -0.00268702
+                        0.703948 0.710233 -0.00505017
+                        0.674592 0.73819 2.88476e-005
+                        0.779756 0.626083 -0.000164559
+                        -0.0129226 0.545048 0.838305
+                        -0.00039493 0.566786 0.823865
+                        -0.0123778 0.524679 -0.85121
+                        0 0.567158 -0.823609
+                        0.018007 -0.528072 0.849009
+                        0.018759 -0.548366 -0.836028
+                        0.0125377 -0.576316 0.817131
+                        0.0201598 -0.554425 0.83199
+                        0.0157855 -0.555093 -0.831638
+                        0.0191285 -0.563152 0.826132
+                        -0.402214 -0.000130936 -0.915546
+                        -0.0141326 0.551977 -0.833739
+                        -0.0131299 0.559733 -0.828569
+                        -0.00039493 0.566786 0.823865
+                        -0.0168926 0.528008 0.849071
+                        -0.0104264 0.585625 0.810515
+                    </float_array>
+                    <technique_common>
+                        <accessor count="42" source="#Geometry-roof_01-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-roof_01-Texture" name="Texture">
+                    <float_array id="Geometry-roof_01-Texture-array" count="132">
+                        0.21727 0.084263
+                        0.005145 0.543133
+                        1.22379 0.853686
+                        1.22718 1.76711
+                        0.008548 1.4556
+                        0.220673 0.996727
+                        1.22394 0.843339
+                        0.005307 0.53183
+                        0.217432 0.072959
+                        1.2401 -0.836538
+                        0.221847 -0.850791
+                        -0.109451 -0.235472
+                        1.2277 -0.060793
+                        -0.109722 -0.224046
+                        0.221576 -0.839365
+                        0.22051 1.00803
+                        0.008385 1.4669
+                        1.22703 1.77745
+                        2.53853 1.16005
+                        0.46988 1.12936
+                        -0.998976 0.113327
+                        -1.00755 -0.213184
+                        1.99839 -0.212477
+                        1.9973 1.14355
+                        2.32031 0.586919
+                        -1.01511 -0.207195
+                        0.496706 1.1226
+                        0.510294 1.1124
+                        2.72091 1.14355
+                        2.02876 -0.212477
+                        2.36372 0.709602
+                        2.36372 1.90797
+                        -1.01959 1.90797
+                        -1.01959 -0.488769
+                        2.36372 -0.488769
+                        -1.01959 0.709602
+                        -1.32146 0.475087
+                        -1.72606 1.14007
+                        2.72312 1.1498
+                        -1.70409 1.16118
+                        2.00771 -0.208104
+                        -0.998096 1.17206
+                        -0.999318 -0.14214
+                        1.99945 -0.14273
+                        2.16429 0.532965
+                        2.02817 0.116686
+                        -0.222167 1.79145
+                        1.23199 1.01265
+                        -0.231403 -0.060271
+                        1.23983 -0.825112
+                        -0.231132 -0.071698
+                        1.22795 -0.071252
+                        -0.222005 1.78015
+                        0.216435 0.075476
+                        -0.114863 0.690795
+                        1.22254 0.855015
+                        -0.225245 0.856377
+                        -0.236544 0.85457
+                        1.23442 0.101155
+                        1.22229 0.865474
+                        0.216164 0.086902
+                        -0.115134 0.702221
+                        -0.236815 0.865996
+                        1.22875 0.088885
+                        -0.106205 0.722627
+                        -0.225408 0.86768
+                    </float_array>
+                    <technique_common>
+                        <accessor count="66" source="#Geometry-roof_01-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-roof_01-vertices">
+                    <input semantic="POSITION" source="#Geometry-roof_01-positions" />
+                </vertices>
+                <polylist count="44" material="Material-roof_01">
+                    <input semantic="VERTEX" source="#Geometry-roof_01-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-roof_01-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-roof_01-Texture" offset="2" set="0" />
+                    <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+                    <p>2 0 0 0 0 1 1 0 2 5 1 3 3 1 4 4 1 5 6 2 6 0 2 7 2 2 8 9 3 9 7 3 10 8 3 11 10 4 12 8 4 13 7 4 14 4 5 15 3 5 16 11 5 17 14 6 18 12 6 19 13 6 20 17 7 21 15 7 22 16 7 23 20 8 24 18 8 25 19 8 26 21 9 27 16 9 28 15 9 29 24 10 30 22 10 31 23 10 32 26 11 33 25 11 34 24 11 30 24 10 30 23 10 32 27 10 35 17 12 21 21 12 27 15 12 29 17 13 21 28 13 36 21 13 27 21 14 27 28 14 36 29 14 37 14 15 38 20 15 24 19 15 26 19 16 26 18 16 25 30 16 39 20 17 24 31 17 40 18 17 25 28 18 36 17 18 21 32 18 27 32 19 27 33 19 37 28 19 36 32 20 27 17 20 21 16 20 23 13 21 20 12 21 19 30 21 41 13 22 20 18 22 42 31 22 43 20 23 44 14 23 18 13 23 20 34 24 45 20 24 44 13 24 20 13 25 20 31 25 43 34 25 45 26 11 33 24 11 30 27 11 35 3 26 16 35 26 46 11 26 17 36 27 47 4 27 15 11 27 17 10 28 12 37 28 48 8 28 13 9 29 49 10 29 12 7 29 14 37 30 50 38 30 51 8 30 11 35 31 52 3 31 4 5 31 3 38 32 51 9 32 9 8 32 11 41 33 53 39 33 54 40 33 55 42 34 56 0 34 7 6 34 6 43 35 57 40 35 55 39 35 54 40 36 58 44 36 59 41 36 60 44 37 59 39 37 61 41 37 60 44 38 59 43 38 62 39 38 61 45 39 63 2 39 0 1 39 2 0 40 1 46 40 64 1 40 2 42 41 65 1 41 2 46 41 64</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+        <geometry id="Geometry-cloth_001_c" name="cloth_001_c">
+            <mesh>
+                <source id="Geometry-cloth_001_c-positions" name="positions">
+                    <float_array id="Geometry-cloth_001_c-positions-array" count="78">
+                        -2.10413 4.37193 5.37461
+                        -2.19503 5.65396 5.25758
+                        -2.42501 4.2754 4.70807
+                        -1.0356 4.2754 6.48271
+                        -1.72007 5.6083 6.02954
+                        -0.756297 6.26412 5.33895
+                        3.3239 4.30041 5.49769
+                        3.17535 5.76657 5.77006
+                        3.02137 4.36028 6.00224
+                        -0.225776 4.2754 6.68601
+                        1.15732 4.2754 6.8319
+                        0.642468 5.81242 6.86198
+                        -0.463087 5.69311 6.68815
+                        1.56674 5.59923 6.77516
+                        0.642468 7.45496 4.84506
+                        -0.249867 6.51651 5.74215
+                        1.56674 4.12788 6.91965
+                        2.38601 5.76657 6.46634
+                        -1.0356 5.66584 6.48271
+                        -1.36284 5.71034 6.26102
+                        2.03296 4.34106 6.62298
+                        -0.922575 6.30036 5.08012
+                        -1.00312 6.51276 4.82303
+                        3.72085 5.76657 4.70807
+                        -2.38586 5.61465 4.70807
+                        -0.677101 4.14951 6.67473
+                    </float_array>
+                    <technique_common>
+                        <accessor count="26" source="#Geometry-cloth_001_c-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-cloth_001_c-normals" name="normals">
+                    <float_array id="Geometry-cloth_001_c-normals-array" count="108">
+                        -0.899412 -0.0239245 0.436447
+                        -0.718961 -0.137559 0.681302
+                        -0.387502 0.875013 0.290163
+                        0.857148 -0.00882477 0.514995
+                        -0.104747 -0.0545207 0.993003
+                        -0.152425 -0.0270087 0.987946
+                        0.0964525 0.0128308 0.995255
+                        0.231685 0.754301 0.61429
+                        -0.177766 0.763049 0.621414
+                        -0.180059 0.761708 0.622398
+                        0.334698 0.092098 0.937814
+                        0.0992326 0.740616 0.664561
+                        -0.252224 0.757346 0.602337
+                        -0.337748 0 0.941236
+                        -0.579009 0.779386 0.239386
+                        -0.533555 0.832532 0.149028
+                        -0.560882 0 0.827896
+                        0.659333 -0.0811552 0.747458
+                        -0.413761 0.874512 0.253041
+                        -0.54486 0.00529366 0.83851
+                        -0.49542 0.757928 0.424387
+                        -0.381047 0.849973 0.363798
+                        -0.851969 -0.0126194 0.523439
+                        -0.381255 0.65051 0.656872
+                        -0.263948 0.701362 0.662135
+                        0.52893 0.0815541 0.844738
+                        0.8895 0.00524454 0.456906
+                        0 1 0
+                        0.462258 0.814346 0.350939
+                        -0.54764 0.826383 0.131076
+                        -0.944905 0.0276193 0.326176
+                        -0.286101 0.76573 0.576024
+                        -0.456198 0.0555269 0.888144
+                        0.550826 -0.0448363 0.833415
+                        -0.0234644 -0.00543979 0.99971
+                        -0.175324 0.096221 0.979797
+                    </float_array>
+                    <technique_common>
+                        <accessor count="36" source="#Geometry-cloth_001_c-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-cloth_001_c-Texture" name="Texture">
+                    <float_array id="Geometry-cloth_001_c-Texture-array" count="100">
+                        -2.18411 -0.971936
+                        -1.90988 -0.911465
+                        -1.95589 -0.0765541
+                        -1.27737 -0.97672
+                        -1.60058 -0.108723
+                        -1.96865 -0.054442
+                        -1.60348 -0.090516
+                        -1.67955 0.425084
+                        2.45879 -0.907577
+                        2.79904 -0.943208
+                        2.59058 0.00949001
+                        -0.154839 0.026768
+                        -0.861693 -0.97542
+                        0.413031 -0.972209
+                        -0.968527 -0.0531811
+                        0.90354 -0.108961
+                        0.816575 1.81499
+                        -0.140093 0.053209
+                        0.90275 -0.088843
+                        -0.736271 1.70003
+                        -1.26078 0.438651
+                        -0.155932 0.05234
+                        -0.963295 -0.027105
+                        0.847813 -1.06751
+                        1.85781 0.00382203
+                        1.83871 0.033892
+                        -1.26509 -0.0567091
+                        -1.26608 -0.071555
+                        -1.26889 -0.97672
+                        -1.56443 1.71128
+                        -1.6773 0.446693
+                        -1.30533 0.474136
+                        -1.45229 -0.00477505
+                        -1.29696 0.443288
+                        -1.4457 -0.042421
+                        -1.27455 -0.071555
+                        1.48871 -0.925951
+                        -1.89538 0.456447
+                        -1.89904 0.419439
+                        -2.17505 0.454854
+                        -2.1807 0.44182
+                        3.17003 0.016264
+                        1.85815 0.022789
+                        2.58817 0.031345
+                        3.16786 0.039277
+                        2.70631 1.44277
+                        -2.18833 -0.074837
+                        -2.18217 -0.09998
+                        -1.26413 -0.045243
+                        -1.07146 -1.0586
+                    </float_array>
+                    <technique_common>
+                        <accessor count="50" source="#Geometry-cloth_001_c-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-cloth_001_c-vertices">
+                    <input semantic="POSITION" source="#Geometry-cloth_001_c-positions" />
+                </vertices>
+                <polylist count="36" material="Material-cloth_001_c">
+                    <input semantic="VERTEX" source="#Geometry-cloth_001_c-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-cloth_001_c-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-cloth_001_c-Texture" offset="2" set="0" />
+                    <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+                    <p>2 0 0 0 0 1 1 0 2 0 1 1 3 1 3 4 1 4 1 2 5 4 2 6 5 2 7 8 3 8 6 3 9 7 3 10 11 4 11 9 4 12 10 4 13 12 5 14 9 5 12 11 5 11 11 6 11 10 6 13 13 6 15 14 7 16 11 7 17 13 7 18 14 8 19 15 8 20 11 8 21 15 9 20 12 9 22 11 9 21 13 10 15 16 10 23 17 10 24 14 11 16 13 11 18 17 11 25 15 12 20 18 12 26 12 12 22 18 13 27 3 13 28 12 13 14 14 14 29 5 14 30 15 14 31 5 15 7 19 15 32 15 15 33 19 16 34 3 16 3 18 16 35 17 17 24 20 17 36 7 17 10 5 18 7 4 18 6 19 18 32 4 19 4 3 19 3 19 19 34 14 20 29 21 20 37 5 20 30 21 21 38 1 21 5 5 21 7 1 22 2 0 22 1 4 22 4 14 23 29 22 23 39 21 23 37 22 24 40 1 24 5 21 24 38 20 25 36 8 25 8 7 25 10 7 26 10 6 26 9 23 26 41 17 27 42 7 27 43 23 27 44 14 28 45 17 28 42 23 28 44 22 29 40 24 29 46 1 29 5 24 30 47 2 30 0 1 30 2 19 31 32 18 31 48 15 31 33 3 32 28 25 32 49 12 32 14 16 33 23 20 33 36 17 33 24 25 34 49 9 34 12 12 34 14 10 35 13 16 35 23 13 35 15</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+        <geometry id="Geometry-bricks_old06" name="bricks_old06">
+            <mesh>
+                <source id="Geometry-bricks_old06-positions" name="positions">
+                    <float_array id="Geometry-bricks_old06-positions-array" count="291">
+                        -2.46081 0.05353 -3.99194
+                        -2.46081 2.548 -3.99194
+                        0.024814 0.05353 -3.99194
+                        -2.46081 0.05353 -2.64041
+                        2.43044 0.05353 -2.64041
+                        2.08678 0.365338 -2.64041
+                        2.43044 0.365338 -2.64041
+                        2.08678 0.365338 -3.99194
+                        1.74312 0.677147 -2.64041
+                        2.08678 0.677147 -2.64041
+                        1.74312 0.677147 -3.99194
+                        2.08678 0.677147 -3.99194
+                        0.024814 0.365338 -3.99194
+                        1.39946 0.988956 -2.64041
+                        1.74312 0.988956 -2.64041
+                        1.39946 0.988956 -3.99194
+                        1.74312 0.988956 -3.99194
+                        0.024814 2.23619 -2.64041
+                        1.05579 1.30076 -2.64041
+                        1.39946 1.30076 -2.64041
+                        1.05579 1.30076 -3.99194
+                        1.39946 1.30076 -3.99194
+                        0.712135 1.61257 -2.64041
+                        1.05579 1.61257 -2.64041
+                        0.712135 1.61257 -3.99194
+                        0.368474 1.92438 -2.64041
+                        0.712135 1.92438 -2.64041
+                        0.368474 1.92438 -3.99194
+                        2.43044 0.05353 -3.99194
+                        0.368474 2.23619 -2.64041
+                        0.024814 2.23619 -3.99194
+                        0.368474 2.23619 -3.99194
+                        0.712135 1.92438 -3.99194
+                        1.05579 1.61257 -3.99194
+                        0.024814 2.548 -2.64041
+                        0.024814 2.548 -3.99194
+                        -2.46081 2.548 -2.64041
+                        2.43044 0.365338 -3.99194
+                        2.45416 0.05353 -3.99194
+                        2.46067 2.54609 3.45977
+                        0.221712 2.10084 3.45977
+                        0.954832 1.77843 3.45977
+                        1.09273 0.750579 3.45977
+                        2.46067 0.0543312 3.45977
+                        -0.631999 1.97748 3.45977
+                        -2.46067 2.54609 3.45977
+                        -0.983601 1.7609 3.45977
+                        -2.46067 0.0543312 3.45977
+                        0.694239 1.964 3.21008
+                        -0.982427 1.76164 3.21008
+                        -0.222343 2.10084 3.21008
+                        0.954168 1.77885 3.21008
+                        1.09273 1.61514 3.21008
+                        1.09273 0.750579 3.21008
+                        -1.08802 0.750579 3.45977
+                        -1.08802 1.61514 3.21008
+                        -1.08802 0.750579 3.21008
+                        2.46067 1.61514 0.594383
+                        2.24166 0.750579 0.594383
+                        2.46067 0.750579 0.594383
+                        2.46067 0.750579 3.12955
+                        2.24166 1.76164 3.0068
+                        2.46067 1.76088 3.00819
+                        2.24166 1.61514 -2.31756
+                        2.46067 1.77842 -2.15727
+                        2.24166 1.77885 -2.15648
+                        2.46067 2.03916 2.36131
+                        2.24166 2.10084 1.60696
+                        2.46067 1.96469 1.05893
+                        2.24166 1.97807 2.59839
+                        2.46067 1.76088 0.0962465
+                        2.24166 0.750579 3.12955
+                        2.46067 2.54609 -2.67836
+                        2.46067 2.10084 -0.788761
+                        2.24166 0.750579 -2.31756
+                        2.46067 1.61514 -2.31756
+                        2.24166 1.964 -1.85431
+                        2.24166 2.10084 -1.30499
+                        -2.46067 0.0543312 -2.67836
+                        2.24166 1.76164 0.0948552
+                        2.46067 0.750579 0.217609
+                        2.24166 0.750579 0.217609
+                        2.24166 1.964 1.05763
+                        2.46067 1.77842 0.754673
+                        2.24166 2.10084 -0.788761
+                        2.46067 0.0543312 -2.67836
+                        2.46067 0.750579 -2.31756
+                        2.24166 1.61514 0.594383
+                        2.24166 2.10084 2.12318
+                        2.24166 1.77885 0.75546
+                        2.46067 2.54609 1.92524
+                        2.46067 2.54609 -0.76019
+                        2.46067 2.54609 -2.29472
+                        -2.46067 2.54609 -2.67836
+                        1.23034 2.54609 -2.67836
+                        -0.615168 2.54609 -2.67836
+                        -2.15309 2.54609 -2.67836
+                    </float_array>
+                    <technique_common>
+                        <accessor count="97" source="#Geometry-bricks_old06-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-bricks_old06-normals" name="normals">
+                    <float_array id="Geometry-bricks_old06-normals-array" count="111">
+                        0 0 -1
+                        0 0 1
+                        0 1 0
+                        0 -1 0
+                        1 0 0
+                        -1 0 0
+                        -0.389599 -0.885897 -0.25179
+                        0.524473 -0.851427 -5.61435e-005
+                        0.398225 -0.892337 0.212489
+                        -0.763311 -0.646031 0.000947057
+                        -0.991121 -0.132966 -0
+                        0.937103 -0.0968515 -0.335346
+                        0.1386 -0.959184 -0.246486
+                        0.00589901 -0.119265 -0.992845
+                        0.00119561 -0.701346 0.71282
+                        -0.431117 -0.900825 0.0515041
+                        -0.16909 -0.905383 -0.389474
+                        -0.495034 -0.843109 0.210022
+                        0 -0.120526 -0.99271
+                        -0.000387475 -0.85286 0.52214
+                        -6.74906e-005 -0.883592 -0.468257
+                        0 -0.70053 0.713623
+                        0.000217233 -0.852665 0.522458
+                        -0.000938951 -0.933575 -0.358382
+                        -0.000735013 -0.968211 -0.250134
+                        0.00119774 -0.701347 0.712819
+                        0.000218817 -0.852665 0.522458
+                        0.00589621 -0.119265 -0.992845
+                        -0.452588 -0.867956 0.204489
+                        0 -0.933497 -0.358584
+                        -0.271105 -0.96255 0
+                        -0 -0.120526 -0.99271
+                        0.00163502 -0.970345 0.241718
+                        -0.875382 0 -0.483431
+                        0.811237 -0.584714 0.00208238
+                        -0.580178 -0.814489 0.000177814
+                        -0.142815 -0.956607 0.253982
+                    </float_array>
+                    <technique_common>
+                        <accessor count="37" source="#Geometry-bricks_old06-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-bricks_old06-Texture" name="Texture">
+                    <float_array id="Geometry-bricks_old06-Texture-array" count="354">
+                        0.491982 0
+                        0.990209 0
+                        0.990209 1
+                        0.925252 0.125
+                        0 0
+                        0.995173 0
+                        0.463529 0.20876
+                        0.898606 0.20876
+                        0.898606 0.333863
+                        0.855331 0.25
+                        0.853358 0.079035
+                        0.41828 0.079035
+                        0.41828 0.204138
+                        0.491982 0.125
+                        0.14756 0.25
+                        0.078675 0.25
+                        0.78541 0.375
+                        0.584915 0.083994
+                        0.149837 0.083994
+                        0.149837 0.209097
+                        0.216444 0.375
+                        0.14756 0.375
+                        0.715489 0.5
+                        0.505725 0.875
+                        0.898606 0.333864
+                        0.285329 0.5
+                        0.216444 0.5
+                        0.645568 0.625
+                        0.463529 0.208757
+                        0.898606 0.208757
+                        0.898606 0.33386
+                        0.575646 0.75
+                        0.967931 0.291935
+                        0.532853 0.291935
+                        0.532853 0.417038
+                        0 1
+                        0.505725 0.684178
+                        0.995173 0.684178
+                        0.96383 0.072956
+                        0.96383 0.211932
+                        0.525868 0.211932
+                        0.855233 0.211932
+                        0.417271 0.211932
+                        0.417271 0.072956
+                        0.969029 0.419876
+                        0.531067 0.419876
+                        0.531067 0.2809
+                        0.525868 0.072956
+                        0.146319 0.211932
+                        0.146319 0.072956
+                        0.58428 0.072956
+                        0.505725 1
+                        0.186147 2.00722
+                        -0.2037 2.00722
+                        -0.2037 0.999001
+                        0.684178 0
+                        1 0
+                        1 1
+                        0 0.684178
+                        0.505725 0.125
+                        0.505725 0
+                        0.722591 0.682836
+                        1.12867 1.03335
+                        0.524889 0.83005
+                        1.12867 -0.104395
+                        0.759777 0.213514
+                        0.19985 0.67483
+                        0.294667 0.773723
+                        -0.198475 1.03335
+                        -0.198475 -0.104395
+                        0.722591 2.41689
+                        0.524889 2.41689
+                        0.652316 2.31433
+                        0.294667 2.41689
+                        0.19985 2.41689
+                        0.200166 2.31433
+                        0.40514 2.31433
+                        1.07469 0.608275
+                        1.12867 0.682836
+                        1.07469 0.683027
+                        1.12867 0.213514
+                        1.07469 0.213514
+                        -0.198475 0.67483
+                        -0.198475 0.213514
+                        -0.144488 0.608275
+                        0.171691 -0.104395
+                        0.759777 -0.104395
+                        0.171691 -0.00183105
+                        1.12867 0.608275
+                        1.06961 0.213514
+                        -0.198475 0.674824
+                        -0.139414 0.675168
+                        1.06961 0.683027
+                        1.06961 0.608275
+                        1.12867 0.682832
+                        -0.100837 0.674824
+                        1.12867 1.43072
+                        1.12867 1.96569
+                        1.06961 1.65583
+                        1.12867 2.2314
+                        1.06961 2.06307
+                        0.421062 0.608275
+                        0.421062 0.213514
+                        0.528766 0.674824
+                        1.74277 1.15193
+                        1.19351 1.15193
+                        1.74277 1.09287
+                        0.720117 0.83005
+                        1.01601 0.682832
+                        1.06961 0.459727
+                        1.06961 0.234088
+                        1.12867 0.671771
+                        -0.139414 0.213514
+                        1.06961 1.43019
+                        1.12867 1.30575
+                        0.386405 0.682832
+                        1.06961 0.671771
+                        0.039028 0.801884
+                        1.13737 -0.806352
+                        1.13737 1.71493
+                        -0.189782 -0.806352
+                        0.529243 0.170019
+                        1.07539 0.170019
+                        0.529243 0.229081
+                        1.06961 2.23083
+                        1.05067 0.608275
+                        1.05067 0.213514
+                        1.06961 0.109968
+                        1.12867 0.109644
+                        1.06961 1.03472
+                        1.12867 1.0353
+                        0.684178 1
+                        0.186147 0.999001
+                        0.58428 0.211932
+                        0.969029 0.2809
+                        0.855233 0.072956
+                        0.009791 0
+                        0.354213 0.625
+                        0.491982 0.875
+                        1.06961 1.86787
+                        0.423098 0.75
+                        0.423098 0.875
+                        0.463529 0.33386
+                        0.575646 0.875
+                        0.502526 0.213514
+                        0.320622 0.767884
+                        0.133312 1.03335
+                        0.71394 1.03335
+                        1.04573 1.03335
+                        0.354213 0.75
+                        0.967931 0.417038
+                        0.645568 0.75
+                        0.285329 0.625
+                        0.715489 0.625
+                        0.463529 0.333864
+                        0.78541 0.5
+                        0.584915 0.209097
+                        0.855331 0.375
+                        0.078675 0.125
+                        0.853358 0.204138
+                        0.925252 0.25
+                        0.009791 0.125
+                        0.463529 0.333863
+                        0.995173 0.125
+                        0.995173 1
+                        0.491982 1
+                        1.07539 0.229081
+                        -0.189782 1.71493
+                        1.06961 1.30607
+                        0.630993 1.03335
+                        1.19351 1.09287
+                        -0.127077 0.213514
+                        0.759777 -0.00183105
+                        -0.144488 0.213514
+                        -0.144488 0.675168
+                        0.722412 2.31433
+                        0.171691 0.213514
+                    </float_array>
+                    <technique_common>
+                        <accessor count="177" source="#Geometry-bricks_old06-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-bricks_old06-vertices">
+                    <input semantic="POSITION" source="#Geometry-bricks_old06-positions" />
+                </vertices>
+                <polylist count="156" material="Material-bricks_old06">
+                    <input semantic="VERTEX" source="#Geometry-bricks_old06-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-bricks_old06-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-bricks_old06-Texture" offset="2" set="0" />
+                    <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+                    <p>2 0 0 0 0 1 1 0 2 5 1 3 3 1 4 4 1 5 7 2 6 5 2 7 6 2 8 8 1 9 3 1 4 5 1 3 10 2 10 8 2 11 9 2 12 12 0 13 10 0 14 11 0 15 13 1 16 3 1 4 8 1 9 15 2 17 13 2 18 14 2 19 12 0 13 15 0 20 16 0 21 18 0 22 17 0 23 13 0 16 20 2 6 18 2 7 19 2 24 12 0 13 20 0 25 21 0 26 22 1 27 17 1 23 18 1 22 24 2 28 22 2 29 23 2 30 25 0 31 17 0 23 22 0 27 27 2 32 25 2 33 26 2 34 3 3 35 2 3 36 28 3 37 30 2 28 17 2 29 29 2 30 27 4 38 31 4 39 29 4 40 11 4 41 9 4 42 5 4 43 32 4 44 26 4 45 22 4 46 20 4 38 33 4 39 23 4 40 21 4 39 19 4 40 13 4 47 14 4 48 8 4 49 10 4 50 35 4 39 34 4 40 17 4 47 3 1 4 17 1 23 34 1 51 1 2 52 36 2 53 34 2 54 28 4 38 37 4 39 6 4 40 0 5 55 3 5 56 36 5 57 0 3 58 2 3 36 3 3 35 12 1 59 2 1 60 38 1 56 41 1 61 39 1 62 40 1 63 43 1 64 39 1 62 42 1 65 46 1 66 44 1 67 45 1 68 45 1 68 47 1 69 46 1 66 41 6 70 40 6 71 48 6 72 44 7 73 46 7 74 49 7 75 50 8 76 44 8 73 49 8 75 52 9 77 41 9 78 51 9 79 42 10 80 41 10 78 53 10 81 46 11 82 54 11 83 55 11 84 40 12 71 44 12 73 50 12 76 54 2 85 42 2 86 56 2 87 59 1 80 57 1 88 58 1 89 62 13 90 60 13 83 61 13 91 65 14 92 63 14 93 64 14 94 62 4 95 39 4 68 43 4 69 68 15 96 66 15 97 67 15 98 62 16 99 69 16 100 66 16 97 57 4 101 59 4 102 70 4 103 60 2 104 59 2 105 71 2 106 73 4 107 64 4 108 72 4 62 63 1 93 74 1 89 75 1 88 77 17 109 76 17 110 73 17 111 47 5 64 45 5 62 78 5 69 81 18 112 79 18 91 80 18 83 68 19 96 82 19 113 83 19 114 57 4 101 70 4 103 83 4 115 84 3 116 77 3 109 73 3 111 39 4 68 62 4 95 66 4 117 85 3 118 43 3 119 78 3 120 74 2 121 81 2 122 86 2 123 69 20 100 62 20 99 61 20 124 70 4 103 73 4 107 83 4 115 57 21 88 83 21 94 87 21 93 72 4 62 75 4 125 86 4 126 76 22 110 65 22 127 64 22 128 79 23 129 84 23 116 70 23 130 1 5 131 0 5 55 36 5 57 4 4 47 28 4 38 6 4 40 35 2 132 1 2 52 34 2 54 36 1 35 3 1 4 34 1 51 30 4 38 35 4 39 17 4 47 16 4 133 14 4 48 10 4 50 15 4 38 21 4 39 13 4 47 18 4 47 20 4 38 23 4 40 24 4 134 32 4 44 22 4 46 7 4 135 11 4 41 5 4 43 25 4 47 27 4 38 29 4 40 28 0 136 2 0 0 12 0 13 24 0 137 12 0 13 30 0 138 66 24 97 69 24 100 88 24 139 24 1 137 30 1 138 27 1 140 27 0 140 30 0 138 31 0 141 31 2 142 30 2 28 29 2 30 29 1 143 17 1 23 25 1 31 86 4 126 85 4 64 72 4 62 86 4 126 80 4 144 85 4 64 83 25 94 89 25 92 87 25 93 39 4 68 66 4 117 68 4 145 68 4 145 90 4 146 39 4 68 68 4 145 91 4 147 90 4 146 68 4 145 92 4 148 91 4 147 68 4 145 72 4 62 92 4 148 68 4 145 83 4 115 72 4 62 24 0 137 27 0 140 32 0 149 32 2 150 27 2 32 26 2 34 26 1 151 25 1 31 22 1 27 12 0 13 24 0 137 20 0 25 20 0 25 24 0 137 33 0 152 33 2 142 24 2 28 23 2 30 23 1 153 22 1 27 18 1 22 15 0 20 12 0 13 21 0 26 21 2 154 20 2 6 19 2 24 19 1 155 18 1 22 13 1 16 13 1 16 17 1 23 3 1 4 10 0 14 12 0 13 16 0 21 16 2 156 15 2 17 14 2 19 14 1 157 13 1 16 8 1 9 28 0 136 12 0 13 7 0 158 7 0 158 12 0 13 11 0 15 11 2 159 10 2 10 9 2 12 9 1 160 8 1 9 5 1 3 28 0 136 7 0 158 37 0 161 37 2 162 7 2 6 6 2 8 6 1 163 5 1 3 4 1 5 4 3 164 3 3 35 28 3 37 35 0 165 2 0 0 1 0 2 73 4 107 72 4 62 83 4 115 81 2 122 80 2 166 86 2 123 43 3 119 47 3 167 78 3 120 82 26 113 89 26 168 83 26 114 79 27 91 70 27 90 80 27 83 45 5 62 93 5 68 78 5 69 76 28 110 64 28 128 73 28 111 74 1 89 86 1 80 75 1 88 64 4 108 75 4 125 72 4 62 84 29 116 73 29 111 70 29 130 78 0 64 94 0 146 72 0 68 78 0 64 95 0 169 94 0 146 78 0 64 96 0 148 95 0 169 78 0 64 93 0 62 96 0 148 72 0 68 85 0 69 78 0 64 59 2 105 58 2 170 71 2 106 59 4 102 80 4 144 70 4 103 59 4 102 85 4 64 80 4 144 66 30 97 88 30 139 67 30 98 43 4 69 60 4 171 62 4 95 43 4 69 59 4 102 60 4 171 43 4 69 85 4 64 59 4 102 63 21 93 75 21 88 64 21 94 60 31 83 71 31 112 61 31 91 68 32 96 67 32 98 82 32 113 57 1 88 87 1 93 58 1 89 42 2 86 53 2 172 56 2 87 54 4 83 56 4 173 55 4 84 41 33 78 52 33 77 53 33 81 46 34 82 55 34 84 49 34 174 41 35 70 48 35 72 51 35 175 40 36 71 50 36 76 48 36 72 47 1 69 54 1 176 46 1 66 42 1 65 47 1 69 43 1 64 42 1 65 54 1 176 47 1 69 39 1 62 41 1 61 42 1 65 39 1 62 44 1 67 40 1 63 39 1 62 45 1 68 44 1 67</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+        <geometry id="Geometry-doorwindow_set" name="doorwindow_set">
+            <mesh>
+                <source id="Geometry-doorwindow_set-positions" name="positions">
+                    <float_array id="Geometry-doorwindow_set-positions-array" count="147">
+                        2.25343 5.19739 -2.29472
+                        2.25343 5.19739 -0.76019
+                        2.25343 2.54609 -2.29472
+                        0.615168 3.68236 -2.43743
+                        -0.307584 5.19739 -2.43743
+                        0.615168 5.19739 -2.43743
+                        -2.15309 2.54609 -2.43743
+                        -0.615168 5.19739 -2.43743
+                        -0.615168 2.54609 -2.43743
+                        2.15309 3.68236 -2.43743
+                        1.23034 5.19739 -2.43743
+                        2.15309 5.19739 -2.43743
+                        2.25343 5.19739 1.92524
+                        2.25343 3.68236 3.07614
+                        2.25343 3.68236 1.92524
+                        2.25343 5.19739 0.390709
+                        2.25343 3.68236 1.54161
+                        2.25343 3.68236 0.390709
+                        2.25343 2.54609 -0.76019
+                        2.25343 5.19739 1.54161
+                        2.25343 5.19739 3.07614
+                        1.23034 3.68236 -2.43743
+                        -2.15309 5.19739 -2.43743
+                        -0.307584 3.68236 -2.43743
+                        2.24166 1.97807 2.59839
+                        2.24166 1.76164 3.0068
+                        2.24166 0.750579 3.12955
+                        2.24166 2.10084 2.12318
+                        2.24166 2.10084 1.60696
+                        2.24166 1.964 1.05763
+                        2.24166 1.77885 0.75546
+                        2.24166 1.61514 0.594383
+                        2.24166 0.750579 0.594383
+                        2.24166 2.10084 -1.30499
+                        2.24166 2.10084 -0.788761
+                        2.24166 1.76164 0.0948552
+                        2.24166 1.964 -1.85431
+                        2.24166 1.77885 -2.15648
+                        2.24166 1.61514 -2.31756
+                        2.24166 0.750579 -2.31756
+                        2.24166 0.750579 0.217609
+                        0.954168 1.77885 3.21008
+                        0.694239 1.964 3.21008
+                        -0.222343 2.10084 3.21008
+                        1.09273 1.61514 3.21008
+                        1.09273 0.750579 3.21008
+                        -1.08802 0.750579 3.21008
+                        -1.08802 1.61514 3.21008
+                        -0.982427 1.76164 3.21008
+                    </float_array>
+                    <technique_common>
+                        <accessor count="49" source="#Geometry-doorwindow_set-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-doorwindow_set-normals" name="normals">
+                    <float_array id="Geometry-doorwindow_set-normals-array" count="9">
+                        1 0 0
+                        -0 -0 -1
+                        0 0 1
+                    </float_array>
+                    <technique_common>
+                        <accessor count="3" source="#Geometry-doorwindow_set-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-doorwindow_set-Texture" name="Texture">
+                    <float_array id="Geometry-doorwindow_set-Texture-array" count="62">
+                        0.514148 0.00331998
+                        0.514148 1.00034
+                        0.00089 1.00034
+                        0.522838 0.517825
+                        0.522838 0.030209
+                        0.885035 0.517825
+                        0.00089 0.00331998
+                        0.515021 0.00331998
+                        0.881152 0.029481
+                        0.881152 0.515326
+                        0.536436 0.029481
+                        0.536436 0.515326
+                        0.885035 0.030209
+                        0.515021 1.00034
+                        0.847325 0.061087
+                        0.588487 0.150229
+                        0.634126 0.081688
+                        0.5626 0.22998
+                        0.5626 0.316615
+                        0.591455 0.408805
+                        0.630497 0.459517
+                        0.665018 0.486549
+                        0.847325 0.486549
+                        0.566773 0.228536
+                        0.633312 0.458411
+                        0.59505 0.407624
+                        0.667143 0.485484
+                        0.845803 0.485484
+                        0.845803 0.059394
+                        0.667143 0.059394
+                        0.636869 0.080025
+                    </float_array>
+                    <technique_common>
+                        <accessor count="31" source="#Geometry-doorwindow_set-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-doorwindow_set-vertices">
+                    <input semantic="POSITION" source="#Geometry-doorwindow_set-positions" />
+                </vertices>
+                <polylist count="31" material="Material-doorwindow_set">
+                    <input semantic="VERTEX" source="#Geometry-doorwindow_set-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-doorwindow_set-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-doorwindow_set-Texture" offset="2" set="0" />
+                    <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+                    <p>2 0 0 0 0 1 1 0 2 5 1 3 3 1 4 4 1 5 8 1 6 6 1 7 7 1 2 11 1 3 9 1 4 10 1 5 14 0 8 12 0 9 13 0 10 17 0 8 15 0 9 16 0 10 18 0 6 2 0 0 1 0 2 15 0 9 19 0 11 16 0 10 12 0 9 20 0 11 13 0 10 9 1 4 21 1 12 10 1 5 6 1 7 22 1 13 7 1 2 3 1 4 23 1 12 4 1 5 26 0 14 24 0 15 25 0 16 26 0 14 27 0 17 24 0 15 26 0 14 28 0 18 27 0 17 26 0 14 29 0 19 28 0 18 26 0 14 30 0 20 29 0 19 26 0 14 31 0 21 30 0 20 26 0 14 32 0 22 31 0 21 35 0 16 33 0 18 34 0 17 35 0 16 36 0 19 33 0 18 35 0 16 37 0 20 36 0 19 35 0 16 38 0 21 37 0 20 35 0 16 39 0 22 38 0 21 35 0 16 40 0 14 39 0 22 43 2 23 41 2 24 42 2 25 43 2 23 44 2 26 41 2 24 43 2 23 45 2 27 44 2 26 43 2 23 46 2 28 45 2 27 43 2 23 47 2 29 46 2 28 43 2 23 48 2 30 47 2 29</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+        <geometry id="Geometry-woodPlanks" name="woodPlanks">
+            <mesh>
+                <source id="Geometry-woodPlanks-positions" name="positions">
+                    <float_array id="Geometry-woodPlanks-positions-array" count="591">
+                        2.54334 2.60994 3.67964
+                        3.83896 2.60994 -2.80291
+                        3.83896 2.60994 3.67964
+                        2.54334 2.60994 -2.80291
+                        -0.111766 7.45722 2.0521
+                        3.67793 7.54958 2.0521
+                        -0.111766 7.34878 1.97644
+                        3.67793 7.54958 -1.14773
+                        -0.111766 7.45722 -1.14773
+                        3.57406 7.44362 -1.07756
+                        3.76187 2.63984 3.5228
+                        3.81289 2.79533 0.228988
+                        3.76187 2.79533 3.5228
+                        3.71085 2.79533 0.228988
+                        3.76187 2.63984 0.228988
+                        -0.111776 7.3234 -1.08141
+                        3.57406 7.4301 -1.22686
+                        -0.111776 7.3234 2.11841
+                        3.57406 7.4301 1.97297
+                        3.76187 3.41174 3.52206
+                        3.81289 3.55128 0.304096
+                        3.76187 3.55128 3.52206
+                        3.71085 3.55128 0.304096
+                        3.76187 3.41174 0.304096
+                        3.57406 7.42244 2.12227
+                        2.36741 2.52172 3.47734
+                        2.36741 2.69483 3.47734
+                        2.36741 2.50714 2.23602
+                        3.76187 2.63984 0.347513
+                        3.81289 2.79533 -2.75924
+                        3.76187 2.79533 0.347513
+                        3.71085 2.79533 -2.75924
+                        3.76187 2.63984 -2.75924
+                        2.36741 2.68025 2.23602
+                        2.36741 2.52172 -2.72925
+                        2.58303 2.71869 -2.64971
+                        2.58303 2.78883 -2.76146
+                        2.58303 2.64856 -2.76146
+                        2.36741 2.69483 -2.72925
+                        2.54052 2.69483 -2.72925
+                        3.77983 2.78883 -2.70558
+                        3.77983 2.64856 -2.70558
+                        2.54052 2.69483 3.47734
+                        2.54052 2.52172 3.47734
+                        2.54052 2.52172 -2.72925
+                        2.58303 3.40254 -2.70558
+                        3.77983 3.47267 -2.76146
+                        3.77983 3.40254 -2.64971
+                        3.77983 3.54281 -2.64971
+                        2.58303 3.54281 -2.70558
+                        3.81289 3.41174 0.306291
+                        3.76187 3.55128 0.306291
+                        3.71085 3.41174 0.306291
+                        3.76187 3.55128 -2.81866
+                        3.76187 3.41174 -2.81866
+                        0 8.05565 4.52831
+                        -2.376e-005 8.12177 4.5283
+                        -0.189953 7.90698 4.52651
+                        -0.111766 7.34878 -1.22338
+                        2.51821 5.62548 4.53361
+                        2.11008 6.10285 4.52467
+                        0.152171 7.9431 4.52651
+                        3.761 -0.15735 -2.72178
+                        3.71595 3.68969 -2.66591
+                        3.80604 3.68969 -2.66591
+                        3.761 -0.15735 -2.61003
+                        -1.188e-005 8.08871 -4.98206
+                        0.17287 7.95635 -4.83699
+                        -0.811998 2.57898 5.1201
+                        -2.28709 2.61198 5.4675
+                        -0.887909 2.57898 4.7727
+                        -0.186419 7.80829 0.457548
+                        -1.84648 2.61198 6.09428
+                        -2.45609 2.64856 3.53069
+                        -2.40021 2.71869 4.72749
+                        -2.51196 2.64856 4.72749
+                        -2.51196 2.78883 4.72749
+                        -2.45609 2.78883 3.53069
+                        0.163374 7.76868 0.457562
+                        -2.45609 3.40254 3.53069
+                        -2.40021 3.47267 4.72749
+                        -2.51196 3.40254 4.72749
+                        -2.51196 3.54281 4.72749
+                        -2.45609 3.54281 3.53069
+                        -0.194952 7.86912 -4.83697
+                        -2.51033 3.41174 4.72801
+                        -2.40159 3.55128 4.72759
+                        -2.40159 3.41174 4.72759
+                        -2.14007 3.41174 5.43303
+                        -2.23815 3.41174 5.45613
+                        -2.14007 3.55128 5.43303
+                        -1.71315 3.55128 6.02553
+                        -1.75885 3.41174 6.0491
+                        -1.80455 3.55128 6.07266
+                        -1.05161 3.41174 6.4835
+                        -1.11368 3.41174 6.54797
+                        -1.08265 3.55128 6.51574
+                        -0.23774 3.55128 6.78066
+                        -0.255434 3.41174 6.8189
+                        -0.273128 3.55128 6.85715
+                        0.663861 3.41174 6.8739
+                        0.660781 3.41174 6.95038
+                        0.662321 3.55128 6.91214
+                        1.56558 3.41174 6.77991
+                        1.5973 3.41174 6.85142
+                        1.58144 3.55128 6.81567
+                        2.38104 3.41174 6.48427
+                        2.43512 3.41174 6.54087
+                        2.40808 3.55128 6.51257
+                        3.03189 3.55128 6.01642
+                        3.0639 3.41174 6.03601
+                        3.09591 3.55128 6.0556
+                        3.46144 3.55128 5.4298
+                        3.50339 3.41174 5.44193
+                        3.54535 3.55128 5.45406
+                        3.72563 3.55128 4.72584
+                        3.77753 3.41174 4.72679
+                        3.7801 2.64856 3.53069
+                        3.83597 2.71869 4.72749
+                        3.72423 2.64856 4.72749
+                        3.72423 2.78883 4.72749
+                        3.7801 2.78883 3.53069
+                        3.7801 3.40254 3.53069
+                        3.7801 3.54281 4.72749
+                        3.7801 3.54281 3.53069
+                        3.7801 3.40254 4.72749
+                        -2.39929 -0.0667682 4.70866
+                        -2.45516 5.78682 4.66362
+                        -2.45516 5.78682 4.7537
+                        -2.51104 -0.0667682 4.70866
+                        3.72929 -0.15735 4.71861
+                        3.84103 5.73526 4.71861
+                        3.72929 5.73526 4.71861
+                        3.84103 -0.15735 4.71861
+                        -1.03134 -0.0854984 6.5522
+                        -1.05097 5.86083 6.48317
+                        -1.10297 5.86083 6.55673
+                        -1.1226 -0.0854984 6.4877
+                        2.3684 -0.0854984 6.54215
+                        2.45629 5.78302 6.47315
+                        2.3684 5.78302 6.54215
+                        2.45629 -0.0854984 6.47315
+                        -2.51033 5.62148 4.72801
+                        -2.40159 5.76102 4.72759
+                        -2.40159 5.62148 4.72759
+                        -2.14007 5.62148 5.43303
+                        -2.23815 5.62148 5.45613
+                        -2.14007 5.76102 5.43303
+                        -1.71315 5.76102 6.02553
+                        -1.75885 5.62148 6.0491
+                        -1.80455 5.76102 6.07266
+                        -1.05161 5.62148 6.4835
+                        -1.11368 5.62148 6.54797
+                        -1.08265 5.76102 6.51574
+                        -0.23774 5.76102 6.78066
+                        -0.255434 5.62148 6.8189
+                        -0.273128 5.76102 6.85715
+                        0.663861 5.62148 6.8739
+                        0.660781 5.62148 6.95038
+                        0.662321 5.76102 6.91214
+                        1.56558 5.62148 6.77991
+                        1.5973 5.62148 6.85142
+                        1.58144 5.76102 6.81567
+                        2.38104 5.62148 6.48427
+                        2.43512 5.62148 6.54087
+                        2.40808 5.76102 6.51257
+                        3.03189 5.76102 6.01642
+                        3.0639 5.62148 6.03601
+                        3.09591 5.76102 6.0556
+                        3.46144 5.76102 5.4298
+                        3.50339 5.62148 5.44193
+                        3.54535 5.76102 5.45406
+                        3.72563 5.76102 4.72584
+                        3.77753 5.62148 4.72679
+                        0.663091 2.57898 4.7727
+                        2.4864 2.61198 6.5917
+                        1.62166 2.61198 6.91106
+                        3.8769 2.61198 4.7727
+                        3.17266 2.61198 6.09428
+                        3.61327 2.61198 5.4675
+                        0.663091 2.61198 7.0211
+                        -0.29548 2.61198 6.91106
+                        -1.16022 2.61198 6.5917
+                        -0.186395 7.74777 0.457562
+                        -2.60467 2.61198 4.7727
+                        -0.194976 7.93524 -4.83699
+                        0.163351 7.8292 0.457548
+                        -1.55911 6.59699 -3.87945
+                        2.51823 5.59242 -3.45789
+                        1.3328 6.81349 -3.87945
+                        2.10274 6.10987 -3.53127
+                        -0.111766 7.36217 2.1184
+                        -0.111776 7.31001 1.97645
+                        -0.111776 7.31001 -1.22338
+                        2.99312 6.73273 2.5716
+                        3.27331 7.12573 2.33279
+                        -0.111766 7.36217 -1.08142
+                    </float_array>
+                    <technique_common>
+                        <accessor count="197" source="#Geometry-woodPlanks-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-woodPlanks-normals" name="normals">
+                    <float_array id="Geometry-woodPlanks-normals-array" count="429">
+                        -0 -1 -0
+                        0 1 0
+                        -0.0139426 0.572101 -0.820065
+                        -0.0136813 0.561381 0.827445
+                        0.99988 0 0.0154869
+                        -0.950159 -0.311764 0
+                        -0 0 -1
+                        0.0488768 -0.58067 0.81267
+                        0.0488768 -0.580671 0.81267
+                        0.999874 0 0.0158518
+                        -0.939199 -0.343374 0
+                        -0.0119583 0.490679 0.871258
+                        -1 0 0
+                        0.999865 0 0.0164191
+                        -0.950159 -0.311764 0
+                        0 0.999996 0.00293591
+                        0.0466353 0 -0.998912
+                        -0.0248107 0.846734 0.531437
+                        0 -0 1
+                        0.0839081 -0.996474 0
+                        0.0248101 -0.846736 -0.531434
+                        -0.0466343 0 0.998912
+                        1 0 0
+                        0.939201 0.343368 0
+                        -0.999867 0 -0.0163239
+                        -0.00964191 0.000205664 0.999954
+                        0.0934776 0.0984666 0.99074
+                        0 0.0145222 -0.999895
+                        -0.999931 -0.0117074 0
+                        0.609363 0.792887 -0.00275549
+                        -0.0212715 -0.999763 0.00464813
+                        -0.848863 0.52861 -0.00183863
+                        -0.0191886 -0.999725 0.0134889
+                        0.531435 -0.846736 0.0248105
+                        -0.998912 -0 -0.0466351
+                        -0.87896 -0.476893 -0.00165668
+                        0.531433 -0.846737 0.0248104
+                        -0.998912 -0 -0.0466351
+                        0.74707 -0.664741 -0.00231172
+                        -0.00383246 0 -0.999993
+                        0.937645 0 -0.347595
+                        -0.756705 0.590514 0.280519
+                        0.798208 -0.34482 -0.493926
+                        -0.830949 -0.345745 0.435872
+                        0.499448 0.29892 -0.813141
+                        -0.499176 0.298898 0.813316
+                        0.371671 -0.288917 -0.882263
+                        -0.372028 -0.288921 0.882111
+                        0.0575867 0.264464 -0.962675
+                        -0.0565956 0.264468 0.962732
+                        -0.100167 0.257638 -0.961035
+                        0.100861 0.257691 0.960949
+                        -0.330132 0.248621 -0.910604
+                        0.333409 0.24899 0.909309
+                        -0.533225 -0.236363 -0.812283
+                        0.537614 -0.236938 0.809216
+                        -0.771405 -0.281522 -0.570684
+                        0.768802 -0.281065 0.57441
+                        -0.881424 -0.330054 -0.337869
+                        0.883531 0.330795 0.331584
+                        0.531434 -0.846736 0.0248106
+                        -0.998912 -0 -0.0466353
+                        0.999954 0.00954477 0
+                        -0 -0.00769447 -0.99997
+                        0.816605 0.00939593 0.577121
+                        0.577129 -0.00757451 -0.816618
+                        0.617543 0 0.786537
+                        -0.617543 0 -0.786537
+                        0.0048894 -0.9999 0.0132391
+                        0.00168476 -0.999891 0.0146755
+                        0.00761553 -0.999916 0.0105068
+                        -0.00168476 -0.999891 0.0146755
+                        0.0102676 -0.99994 0.00389589
+                        -0.0048894 -0.9999 0.0132391
+                        0.912477 -0.408983 -0.0108488
+                        0.615858 -0.787233 0.0313411
+                        -0.00761554 -0.999916 0.0105067
+                        0.00959629 -0.999931 0.00674585
+                        -0.594065 -0.803747 0.0328192
+                        -0.591857 -0.805499 -0.0296133
+                        0.0106269 -0.998925 0.0451229
+                        -0.609172 0.792786 0.0199939
+                        -0.0192179 -0.999777 0.00878439
+                        -0.748962 0.662402 -0.0167159
+                        0.761071 0.64847 -0.0160618
+                        0.928487 0.371214 0.010584
+                        -0.574277 -0.000377639 -0.818661
+                        -0.596772 -0.000382326 -0.802411
+                        0.681776 0.467651 -0.562569
+                        -0.0131357 0.560007 -0.828384
+                        0.0119925 0.000213433 0.999928
+                        0 -0.999996 -0.00293571
+                        0.0192936 -0.565119 -0.824784
+                        0 -0.999931 0.0117421
+                        -0.0839135 0.996473 0
+                        0 0.999931 -0.0117429
+                        -0.0102157 0.572126 0.820102
+                        0.0325081 -0.995053 0.0938787
+                        0.0325081 -0.995053 0.0938782
+                        0.303021 0.327745 0.894853
+                        0.0141314 -0.492019 -0.87047
+                        -0.0135013 0.572105 0.820069
+                        -0.0131358 0.560008 -0.828383
+                        0.950161 -0.311759 0
+                        -0.99988 0 0.0154872
+                        0.939201 -0.343368 0
+                        -0.999874 0 0.0158521
+                        -0.999865 0 0.0164194
+                        -0.0248107 -0.846734 0.531437
+                        0.0466343 0 0.998912
+                        0.891415 -0.297694 0.341699
+                        0.0499682 0.98369 -0.172791
+                        -0.0466353 0 -0.998912
+                        0.0248102 0.846735 -0.531437
+                        -0.893745 -0.297849 -0.335418
+                        0.776533 -0.258788 0.574478
+                        0.999867 0 -0.0163236
+                        -0.939199 0.343374 0
+                        -0.779311 -0.258889 -0.570659
+                        0.602982 0.269123 0.75099
+                        0.999931 -0.0117073 0
+                        0 0.0145223 0.999895
+                        -0.59953 0.269023 -0.753784
+                        0.334712 0.269412 0.902987
+                        -0.331528 0.269358 -0.904177
+                        0.101413 0.261907 0.95975
+                        -0.100742 0.261932 -0.959814
+                        0.998912 0 -0.0466349
+                        0.531435 0.846736 0.0248105
+                        -0.136452 -0.277895 0.950871
+                        0.138842 -0.278087 -0.950468
+                        -0.289337 0.276084 0.916549
+                        0.287585 0.27584 -0.917173
+                        -0.761497 0.582315 0.284659
+                        -0.580209 -0.316729 0.75036
+                        0.811329 0 -0.58459
+                        -0.651871 0.545376 0.526905
+                        0.58212 -0.317075 -0.748732
+                        -0.816605 0.00939593 -0.577121
+                        0.531434 0.846736 0.0248106
+                        -0.577129 -0.00757451 0.816618
+                        -0.999954 0.00954473 0
+                        0 -0.00769447 0.99997
+                    </float_array>
+                    <technique_common>
+                        <accessor count="143" source="#Geometry-woodPlanks-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-woodPlanks-Texture" name="Texture">
+                    <float_array id="Geometry-woodPlanks-Texture-array" count="540">
+                        2.5638 1.9199
+                        2.5638 1.26138
+                        -0.034746 1.9199
+                        -0.034746 1.26138
+                        0.556433 0.192424
+                        0.556406 0.306864
+                        -2.40769 0.350729
+                        3.41112 0.240676
+                        3.48986 0.348913
+                        0.538934 0.305446
+                        -2.51747 0.807293
+                        -2.51747 0.676807
+                        0.400079 0.807293
+                        3.31763 0.676807
+                        6.23518 0.676807
+                        3.31763 0.807293
+                        0.734609 0.802461
+                        0.777689 0.67537
+                        0.82077 0.802461
+                        -2.3286 0.228129
+                        -1.37898 0.500266
+                        -1.37898 0.408592
+                        0.670779 0.500266
+                        2.6103 0.46971
+                        4.66006 0.46971
+                        2.6103 0.561385
+                        1.16467 0.601834
+                        1.20775 0.474743
+                        1.25083 0.601834
+                        1.19552 0.660042
+                        1.60859 0.660042
+                        1.60859 0.819846
+                        -0.48192 0.661144
+                        1.19213 0.661144
+                        1.19213 0.817529
+                        0.373277 0.602854
+                        0.435994 0.731716
+                        0.498712 0.602854
+                        -0.487402 0.322107
+                        -0.487402 0.190892
+                        1.20002 0.190892
+                        0.003556 0.348163
+                        1.00356 0.348163
+                        0.003556 0.473874
+                        0.851881 0.324588
+                        0.851881 0.417005
+                        0.149319 0.370796
+                        0.361921 0.838493
+                        0.361921 1.00336
+                        0.27949 1.00336
+                        1.62188 0.190892
+                        1.20002 0.322107
+                        0.007112 0.604923
+                        1.00711 0.539152
+                        0.007112 0.47338
+                        1.00356 0.473874
+                        1.60814 0.661144
+                        1.60814 0.817529
+                        -0.484418 0.817529
+                        0.27949 0.838493
+                        0.498712 0.731716
+                        0.373277 0.731716
+                        0.435994 0.602854
+                        -3.50547 0.475311
+                        -3.17932 0.475311
+                        -3.34239 0.601265
+                        1.8386 0.7248
+                        2.02896 0.70979
+                        2.1002 0.746184
+                        -0.173003 0.750153
+                        1.96937 0.712662
+                        1.28813 0.727601
+                        -1.79257 0.343198
+                        3.03027 0.387358
+                        -1.79257 0.431518
+                        3.04742 0.431171
+                        3.04742 0.523588
+                        -1.77542 0.477379
+                        -2.3994 0.350685
+                        0.701522 -0.40764
+                        0.568872 -0.370427
+                        0.436221 -1.09355
+                        3.50785 0.352108
+                        0.19689 -0.877557
+                        0.149319 0.417005
+                        0.851881 0.370796
+                        0.149319 0.324588
+                        0.538904 0.205585
+                        -3.50547 0.601265
+                        0.237141 0.793907
+                        0.619911 0.793157
+                        0.225679 0.695833
+                        -1.73373 0.659996
+                        -1.80805 0.659996
+                        -1.73373 0.809654
+                        0.596038 0.693096
+                        -1.49695 0.659996
+                        -1.49695 0.809654
+                        0.215452 0.557282
+                        0.527056 0.562776
+                        0.249886 0.626615
+                        -1.58357 0.809654
+                        -1.821 0.809654
+                        -1.58357 0.659996
+                        0.139086 0.406133
+                        0.847543 0.368239
+                        0.070791 0.329292
+                        -1.03503 0.659996
+                        -1.03503 0.809654
+                        -1.10055 0.809654
+                        -1.10055 0.659996
+                        -0.411765 0.659996
+                        -0.411765 0.809654
+                        0.073218 0.401273
+                        0.809477 0.434304
+                        0.113568 0.450035
+                        -0.457326 0.809654
+                        -0.457326 0.659996
+                        0.350534 0.636181
+                        0.701837 0.590035
+                        0.342709 0.565903
+                        0.327402 0.659996
+                        0.327402 0.809654
+                        0.309018 0.809654
+                        0.309018 0.659996
+                        0.33954 0.663904
+                        0.696497 0.64909
+                        0.343896 0.584207
+                        1.10533 0.659996
+                        1.10533 0.809654
+                        1.11724 0.809654
+                        1.11724 0.659996
+                        0.049763 0.301632
+                        0.821105 0.287208
+                        0.071374 0.199588
+                        1.85232 0.659996
+                        1.85232 0.809654
+                        1.88613 0.809654
+                        1.88613 0.659996
+                        2.49642 0.659996
+                        2.49642 0.809654
+                        0.174358 0.216675
+                        0.70142 0.253838
+                        0.141534 0.307336
+                        2.54218 0.809654
+                        2.54218 0.659996
+                        2.97888 0.659996
+                        2.97888 0.809654
+                        0.643406 0.637063
+                        0.200195 0.659045
+                        0.694831 0.534305
+                        3.04445 0.809654
+                        3.04445 0.659996
+                        3.34647 0.659996
+                        3.34647 0.809654
+                        0.530238 0.643388
+                        0.297575 0.658261
+                        0.547388 0.60025
+                        -1.77542 0.523588
+                        -1.77542 0.431171
+                        -1.73373 3.02988
+                        -1.80805 3.02988
+                        -1.73373 3.17954
+                        -1.49695 3.02988
+                        -1.49695 3.17954
+                        -1.58357 3.17954
+                        -1.821 3.17954
+                        -1.58357 3.02988
+                        -1.03503 3.02988
+                        -1.03503 3.17954
+                        -1.10055 3.17954
+                        -1.10055 3.02988
+                        -0.411765 3.02988
+                        -0.411765 3.17954
+                        -0.457326 3.17954
+                        -0.457326 3.02988
+                        0.327402 3.02988
+                        0.327402 3.17954
+                        0.309018 3.17954
+                        0.309018 3.02988
+                        1.10533 3.02988
+                        1.10533 3.17954
+                        1.11724 3.17954
+                        1.11724 3.02988
+                        1.85232 3.02988
+                        1.85232 3.17954
+                        1.88613 3.17954
+                        1.88613 3.02988
+                        2.49642 3.02988
+                        2.49642 3.17954
+                        2.54218 3.17954
+                        2.54218 3.02988
+                        2.97888 3.02988
+                        2.97888 3.17954
+                        3.04445 3.17954
+                        3.04445 3.02988
+                        3.34647 3.02988
+                        3.34647 3.17954
+                        -0.114989 0.822616
+                        0.701522 0.3527
+                        0.006956 1.24653
+                        0.436221 1.79895
+                        0.701522 1.92819
+                        0.19689 1.58296
+                        -0.157009 0.3527
+                        -0.114989 -0.117216
+                        0.006956 -0.541134
+                        3.40827 0.232619
+                        -2.30026 0.255363
+                        0.701522 -1.24924
+                        0.158025 0.395134
+                        0.317311 1.02392
+                        0.158025 1.05628
+                        2.0218 0.442274
+                        1.95056 0.40588
+                        0.330074 0.466052
+                        2.22297 0.417843
+                        1.14954 0.467241
+                        1.87024 0.462294
+                        0.573643 0.439409
+                        -0.309864 0.766946
+                        -0.264271 0.743671
+                        -0.484418 0.661144
+                        1.62188 0.322107
+                        -0.48192 0.817529
+                        1.19552 0.819846
+                        0.048295 0.429844
+                        0.550847 0.451046
+                        -0.335622 0.400633
+                        0.400079 0.676807
+                        6.23518 0.807293
+                        7.67069 0.431455
+                        -6.64567 0.491962
+                        -6.64567 0.370948
+                        0.670779 0.408592
+                        4.66006 0.561385
+                        1.031 0.436984
+                        -0.030998 0.497491
+                        -0.030998 0.376477
+                        1.00356 0.411019
+                        3.43338 3.02988
+                        0.320642 0.581944
+                        0.003556 0.411019
+                        1.15002 0.477945
+                        1.15002 0.356931
+                        -0.150019 0.417438
+                        0.234203 0.565978
+                        0.690329 0.304446
+                        0.71251 0.20323
+                        0.157946 0.262006
+                        0.819686 0.176802
+                        0.687457 0.568572
+                        0.691531 0.553588
+                        0.712144 0.626482
+                        0.346622 0.601042
+                        -1.89961 0.659996
+                        -1.821 0.659996
+                        -1.80805 0.809654
+                        0.841077 0.45822
+                        0.777878 0.410389
+                        0.093393 0.425654
+                        0.569098 0.62641
+                        0.232669 0.591949
+                        0.797282 0.328769
+                        0.897804 0.407708
+                        0.104939 0.367712
+                        -1.821 3.02988
+                        -1.80805 3.17954
+                        -1.89961 3.02988
+                        3.43338 0.659996
+                    </float_array>
+                    <technique_common>
+                        <accessor count="270" source="#Geometry-woodPlanks-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-woodPlanks-vertices">
+                    <input semantic="POSITION" source="#Geometry-woodPlanks-positions" />
+                </vertices>
+                <polylist count="273" material="Material-woodPlanks">
+                    <input semantic="VERTEX" source="#Geometry-woodPlanks-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-woodPlanks-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-woodPlanks-Texture" offset="2" set="0" />
+                    <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+                    <p>2 0 0 0 0 1 1 0 2 3 1 3 0 1 1 1 1 2 6 2 4 4 2 5 5 2 6 9 3 7 7 3 8 8 3 9 12 4 10 10 4 11 11 4 12 14 5 13 10 5 14 13 5 15 11 6 16 14 6 17 13 6 18 16 7 19 7 7 6 15 7 5 18 8 19 5 8 6 17 8 5 21 9 20 19 9 21 20 9 22 23 10 23 19 10 24 22 10 25 20 6 26 23 6 27 22 6 28 24 11 7 5 11 8 4 11 9 27 12 29 25 12 30 26 12 31 30 13 10 28 13 11 29 13 12 32 14 13 28 14 14 31 14 15 34 12 32 27 12 33 33 12 34 29 6 16 32 6 17 31 6 18 37 12 35 35 12 36 36 12 37 39 15 38 38 15 39 33 15 40 41 16 41 37 16 42 40 16 43 36 17 44 35 17 45 40 17 46 43 18 47 42 18 48 26 18 49 44 19 39 43 19 50 27 19 51 47 20 52 45 20 53 46 20 54 49 21 55 45 21 42 48 21 43 44 22 56 39 22 57 42 22 58 44 6 47 34 6 59 38 6 49 48 22 60 47 22 61 46 22 62 52 18 63 50 18 64 51 18 65 51 23 20 50 23 21 53 23 22 54 24 23 52 24 24 53 24 25 57 25 66 55 25 67 56 25 68 58 2 4 8 2 5 7 2 6 61 26 69 59 26 70 60 26 71 64 27 72 62 27 73 63 27 74 62 28 75 65 28 76 63 28 77 67 29 7 66 29 8 56 29 78 70 30 79 68 30 80 69 30 81 71 31 4 56 31 82 66 31 6 72 32 83 69 32 81 68 32 80 75 33 84 73 33 85 74 33 86 77 34 55 73 34 42 76 34 43 78 35 87 55 35 78 66 35 8 76 18 60 75 18 61 74 18 62 81 36 52 79 36 53 80 36 54 83 37 55 79 37 42 82 37 43 84 38 19 66 38 6 55 38 82 82 18 60 81 18 61 80 18 62 87 39 63 85 39 64 86 39 88 89 0 89 85 0 90 88 0 91 88 40 92 87 40 93 90 40 94 86 41 95 85 41 90 90 41 91 92 42 96 88 42 92 91 42 97 91 1 98 90 1 99 93 1 100 93 43 101 90 43 102 92 43 103 95 0 104 92 0 105 94 0 106 94 44 107 92 44 96 96 44 108 96 45 109 93 45 101 95 45 110 98 46 111 94 46 107 97 46 112 97 1 113 96 1 114 99 1 115 99 47 116 96 47 109 98 47 117 101 0 118 98 0 119 100 0 120 100 48 121 98 48 111 102 48 122 102 49 123 99 49 116 101 49 124 104 0 125 101 0 126 103 0 127 103 50 128 100 50 121 105 50 129 105 51 130 102 51 123 104 51 131 107 0 132 104 0 133 106 0 134 106 52 135 103 52 128 108 52 136 108 53 137 105 53 130 107 53 138 110 54 139 106 54 135 109 54 140 109 1 141 108 1 142 111 1 143 111 55 144 108 55 137 110 55 145 113 56 146 110 56 139 112 56 147 112 1 148 109 1 149 114 1 150 114 57 151 111 57 144 113 57 152 116 58 153 113 58 146 115 58 154 115 59 155 112 59 156 116 59 157 119 60 84 117 60 85 118 60 86 121 61 55 117 61 42 120 61 43 120 18 60 119 18 61 118 18 62 124 12 55 122 12 42 123 12 43 125 22 41 122 22 42 123 22 43 128 62 72 126 62 73 127 62 74 126 63 75 129 63 76 127 63 77 132 18 158 130 18 76 131 18 159 133 6 75 130 6 76 131 6 159 136 64 72 134 64 73 135 64 74 134 65 75 137 65 76 135 65 77 140 66 158 138 66 76 139 66 159 141 67 75 138 67 76 139 67 159 144 39 63 142 39 64 143 39 88 146 0 89 142 0 90 145 0 91 145 40 160 144 40 161 147 40 162 143 41 95 142 41 90 147 41 91 149 42 163 145 42 160 148 42 164 148 1 98 147 1 99 150 1 100 150 43 165 147 43 166 149 43 167 152 0 104 149 0 105 151 0 106 151 44 168 149 44 163 153 44 169 153 45 170 150 45 165 152 45 171 155 46 172 151 46 168 154 46 173 154 1 113 153 1 114 156 1 115 156 47 174 153 47 170 155 47 175 158 0 118 155 0 119 157 0 120 157 48 176 155 48 172 159 48 177 159 49 178 156 49 174 158 49 179 161 0 125 158 0 126 160 0 127 160 50 180 157 50 176 162 50 181 162 51 182 159 51 178 161 51 183 164 0 132 161 0 133 163 0 134 163 52 184 160 52 180 165 52 185 165 53 186 162 53 182 164 53 187 167 54 188 163 54 184 166 54 189 166 1 141 165 1 142 168 1 143 168 55 190 165 55 186 167 55 191 170 56 192 167 56 188 169 56 193 169 1 148 166 1 149 171 1 150 171 57 194 168 57 190 170 57 195 173 58 196 170 58 192 172 58 197 172 59 155 169 59 156 173 59 157 176 68 198 174 68 199 175 68 200 179 1 201 177 1 202 178 1 203 177 1 202 180 1 204 176 1 198 177 1 202 176 1 198 175 1 200 180 69 204 174 69 199 176 69 198 177 1 202 181 1 205 180 1 204 178 70 203 175 70 200 174 70 199 181 71 205 174 71 199 180 71 204 177 72 202 179 72 201 174 72 199 177 1 202 182 1 206 181 1 205 182 73 206 174 73 199 181 73 205 177 1 202 72 1 83 182 1 206 183 74 4 84 74 19 55 74 82 183 75 4 55 75 82 57 75 207 177 1 202 175 1 200 178 1 203 72 76 83 174 76 199 182 76 206 178 77 203 174 77 199 179 77 201 55 78 78 78 78 87 61 78 208 67 79 7 78 79 87 66 79 8 177 1 202 69 1 81 72 1 83 68 80 80 174 80 199 72 80 83 184 1 209 69 1 81 177 1 202 185 81 19 71 81 4 66 81 6 184 82 209 70 82 79 69 82 81 56 83 82 71 83 4 57 83 207 174 0 210 68 0 211 70 0 212 186 84 87 56 84 78 61 84 208 186 85 87 67 85 7 56 85 78 185 86 213 84 86 214 187 86 215 185 87 213 66 87 216 84 87 214 190 88 217 188 88 218 189 88 219 16 89 19 58 89 4 7 89 6 56 90 220 55 90 221 61 90 69 39 6 48 44 6 47 38 6 49 43 22 222 44 22 56 42 22 58 34 91 38 44 91 39 27 91 51 9 92 7 15 92 87 7 92 8 27 93 51 43 93 50 25 93 223 25 18 59 43 18 47 26 18 49 42 94 223 39 94 38 33 94 40 26 95 50 42 95 223 33 95 40 38 12 224 34 12 32 33 12 34 33 12 225 27 12 29 26 12 31 191 96 87 24 96 7 4 96 9 192 97 4 18 97 19 17 97 5 193 98 4 16 98 19 15 98 5 195 99 226 194 99 227 24 99 228 24 100 7 17 100 87 5 100 8 196 101 87 9 101 7 8 101 9 18 102 19 6 102 4 5 102 6 0 0 1 3 0 3 1 0 2 0 1 1 2 1 0 1 1 2 10 103 11 14 103 229 11 103 12 10 104 14 12 104 230 13 104 15 12 1 231 11 1 232 13 1 233 19 105 21 23 105 234 20 105 22 19 106 24 21 106 235 22 106 25 21 1 236 20 1 237 22 1 238 28 103 11 32 103 229 29 103 12 28 107 14 30 107 230 31 107 15 30 1 231 29 1 232 31 1 233 35 108 45 37 108 44 41 108 46 35 109 239 41 109 41 40 109 43 37 16 42 36 16 55 40 16 43 171 110 194 170 110 195 173 110 240 169 111 156 171 111 241 173 111 157 45 21 42 47 21 41 48 21 43 45 112 42 49 112 55 46 112 242 49 113 85 48 113 84 46 113 86 170 114 192 169 114 193 172 114 197 168 115 190 167 115 191 170 115 195 50 0 243 52 0 244 54 0 245 50 116 21 54 116 234 53 116 22 52 117 24 51 117 235 53 117 25 166 1 149 168 1 246 171 1 150 167 118 188 166 118 189 169 118 193 165 119 186 164 119 187 167 119 191 65 120 76 62 120 75 64 120 77 65 121 73 64 121 72 63 121 74 163 122 184 165 122 185 166 122 189 164 0 247 163 0 248 167 0 249 162 123 182 161 123 183 164 123 187 160 124 180 162 124 181 165 124 185 161 0 133 160 0 250 163 0 134 159 125 178 158 125 179 161 125 183 157 126 176 159 126 177 162 126 181 158 0 126 157 0 251 160 0 127 73 34 42 75 34 41 76 34 43 73 127 42 77 127 55 74 127 242 77 128 85 76 128 84 74 128 86 156 129 174 155 129 175 158 129 179 154 1 252 156 1 253 159 1 254 155 130 172 154 130 173 159 130 177 79 37 42 81 37 41 82 37 43 79 127 42 83 127 55 80 127 242 83 128 85 82 128 84 80 128 86 153 131 170 152 131 171 155 131 175 151 132 168 153 132 169 154 132 173 85 0 90 87 0 95 88 0 91 85 133 255 89 133 256 90 133 102 87 40 93 86 40 257 90 40 94 152 0 258 151 0 259 155 0 260 150 134 165 149 134 167 152 134 171 89 0 261 88 0 99 92 0 262 88 135 92 90 135 94 91 135 97 148 1 263 150 1 264 153 1 265 90 136 102 89 136 256 92 136 103 149 137 163 148 137 164 153 137 169 92 137 96 91 137 97 96 137 108 91 1 263 93 1 264 96 1 265 93 134 101 92 134 103 95 134 110 95 0 258 94 0 259 98 0 260 94 132 107 96 132 108 97 132 112 147 136 166 146 136 266 149 136 167 96 131 109 95 131 110 98 131 117 145 135 160 147 135 162 148 135 164 98 130 111 97 130 112 102 130 122 97 1 252 99 1 253 102 1 254 99 129 116 98 129 117 101 129 124 101 0 126 100 0 251 103 0 127 100 126 121 102 126 122 105 126 129 146 0 261 145 0 99 149 0 262 102 125 123 101 125 124 104 125 131 104 0 133 103 0 250 106 0 134 103 124 128 105 124 129 108 124 136 144 40 161 143 40 267 147 40 162 105 123 130 104 123 131 107 123 138 107 0 247 106 0 248 110 0 249 106 122 135 108 122 136 109 122 140 142 133 268 146 133 266 147 133 166 108 119 137 107 119 138 110 119 145 142 0 90 144 0 95 145 0 91 110 118 139 109 118 140 112 118 147 109 1 149 111 1 246 114 1 150 111 115 144 110 115 145 113 115 152 138 67 76 140 67 158 139 67 159 113 114 146 112 114 147 115 114 154 112 111 156 114 111 241 116 111 157 114 110 151 113 110 152 116 110 269 138 66 76 141 66 75 139 66 159 137 138 73 136 138 72 135 138 74 117 61 42 119 61 41 120 61 43 117 127 42 121 127 55 118 127 242 121 139 85 120 139 84 118 139 86 137 140 76 134 140 75 136 140 77 130 6 76 132 6 158 131 6 159 130 18 76 133 18 75 131 18 159 122 12 42 125 12 41 123 12 43 122 22 42 124 22 55 123 22 43 129 141 73 128 141 72 127 141 74 129 142 76 126 142 75 128 142 77</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+        <geometry id="Geometry-con_dirt_01" name="con_dirt_01">
+            <mesh>
+                <source id="Geometry-con_dirt_01-positions" name="positions">
+                    <float_array id="Geometry-con_dirt_01-positions-array" count="225">
+                        0.64383 7.4231 2.05362
+                        2.51945 7.48383 2.05362
+                        0.743228 5.61579 0.777869
+                        2.51945 5.61579 0.777869
+                        2.51945 5.55858 3.36177
+                        0.743228 5.55858 3.36177
+                        0.64383 7.4231 -1.14621
+                        2.51945 7.48383 -1.14621
+                        0.743228 5.61579 -2.42196
+                        2.51945 5.61579 -2.42196
+                        2.51945 5.55858 0.161946
+                        0.743228 5.55858 0.161946
+                        2.46067 5.57615 -2.67836
+                        2.46067 5.61773 3.45977
+                        2.46067 5.57615 3.45977
+                        2.46067 2.54609 -2.29472
+                        2.25343 2.54609 -2.29472
+                        2.46067 2.54609 -0.76019
+                        2.25343 2.54609 -0.76019
+                        2.25343 5.19739 -0.76019
+                        2.46067 5.19739 -2.29472
+                        2.25343 5.19739 -2.29472
+                        2.46067 5.19739 0.390709
+                        2.25343 5.19739 0.390709
+                        2.46067 3.68236 0.390709
+                        2.25343 3.68236 0.390709
+                        2.46067 3.68236 1.54161
+                        2.25343 3.68236 1.54161
+                        2.46067 5.19739 1.54161
+                        2.25343 5.19739 1.54161
+                        2.46067 5.19739 1.92524
+                        2.25343 5.19739 1.92524
+                        2.46067 3.68236 1.92524
+                        2.25343 3.68236 1.92524
+                        2.46067 3.68236 3.07614
+                        2.25343 3.68236 3.07614
+                        2.46067 5.19739 3.07614
+                        2.25343 5.19739 3.07614
+                        2.15309 3.68236 -2.67836
+                        2.15309 3.68236 -2.43743
+                        2.15309 5.19739 -2.67836
+                        2.15309 5.19739 -2.43743
+                        1.23034 5.19739 -2.67836
+                        1.23034 5.19739 -2.43743
+                        1.23034 3.68236 -2.67836
+                        1.23034 3.68236 -2.43743
+                        -2.15309 2.54609 -2.67836
+                        -2.15309 2.54609 -2.43743
+                        -0.615168 2.54609 -2.67836
+                        -0.615168 2.54609 -2.43743
+                        -0.615168 5.19739 -2.67836
+                        -0.615168 5.19739 -2.43743
+                        -2.15309 5.19739 -2.67836
+                        -2.15309 5.19739 -2.43743
+                        0.615168 3.68236 -2.67836
+                        0.615168 3.68236 -2.43743
+                        0.615168 5.19739 -2.67836
+                        0.615168 5.19739 -2.43743
+                        -0.307584 5.19739 -2.67836
+                        -0.307584 5.19739 -2.43743
+                        -0.307584 3.68236 -2.67836
+                        -0.307584 3.68236 -2.43743
+                        2.46067 2.54609 1.92524
+                        -2.46067 2.54609 -2.67836
+                        -2.46067 5.59694 3.45977
+                        -2.46067 5.59694 -2.67836
+                        -2.46067 2.54609 3.45977
+                        0.922753 5.57615 -2.67836
+                        -0.38448 5.57615 -2.67836
+                        1.23034 2.54609 -2.67836
+                        2.46067 2.54609 -2.67836
+                        2.46067 2.54609 3.45977
+                        2.46067 5.61773 -2.67836
+                        0 7.97207 3.45977
+                        0 7.97207 -2.67836
+                    </float_array>
+                    <technique_common>
+                        <accessor count="75" source="#Geometry-con_dirt_01-positions-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-con_dirt_01-normals" name="normals">
+                    <float_array id="Geometry-con_dirt_01-normals-array" count="66">
+                        -0.0186459 0.575896 -0.81731
+                        0 -0.999755 -0.0221346
+                        -0 0.562012 0.827129
+                        -0.0186459 0.575896 -0.81731
+                        0 -0.999755 -0.0221346
+                        -0 0.562012 0.827129
+                        1 -0 0
+                        0 1 0
+                        0 0 -1
+                        0 -0 1
+                        0 -1 0
+                        -1 0 0
+                        0.982022 0.13433 0.132623
+                        0.994021 0.0776981 -0.0767106
+                        0.984172 0 -0.177218
+                        0.562423 -0.820624 -0.101274
+                        -0.0185709 0.57358 0.818939
+                        -0.998536 -0.054072 -0.00119715
+                        0 0.563964 -0.825799
+                        -0.0185709 0.573581 0.818939
+                        -0.998536 -0.054072 -0.00119715
+                        0 0.563964 -0.825799
+                    </float_array>
+                    <technique_common>
+                        <accessor count="22" source="#Geometry-con_dirt_01-normals-array" stride="3">
+                            <param name="X" type="float" />
+                            <param name="Y" type="float" />
+                            <param name="Z" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <source id="Geometry-con_dirt_01-Texture" name="Texture">
+                    <float_array id="Geometry-con_dirt_01-Texture-array" count="238">
+                        0.947005 0.029714
+                        1 0.968458
+                        0 1
+                        0.052995 0
+                        1 0
+                        1 1
+                        0.052995 -1.23837
+                        1 -1.23837
+                        1 -0.238369
+                        1.10284 -0.798647
+                        1.10284 0.97259
+                        1.10284 0.419078
+                        1.10284 0.861888
+                        1.04982 0.861888
+                        -0.10325 0.851095
+                        -0.156272 0.000635982
+                        -0.10325 0.000635982
+                        1.10284 0.000635982
+                        1.10284 0.851095
+                        1.04982 0.851095
+                        1.10284 0.365119
+                        0.233266 0.00822502
+                        0.565373 0.00822502
+                        0.565373 0.061246
+                        -0.156272 0.851095
+                        -0.156272 0.365119
+                        -0.10325 0.365119
+                        0.89748 0.00822502
+                        0.89748 0.061246
+                        -0.209543 0.00822502
+                        0.122564 0.00822502
+                        0.122564 0.061246
+                        1.00818 0.00822502
+                        1.34029 0.00822502
+                        1.34029 0.061246
+                        -0.106852 0.365119
+                        0.838126 0.019881
+                        1.07421 0.019881
+                        1.07421 0.089402
+                        1.05342 0.851095
+                        1.07421 0.095596
+                        0.838126 0.095596
+                        0.838126 0.026075
+                        0.36596 0.095596
+                        -0.027511 0.095596
+                        -0.027511 0.026075
+                        -0.106852 0.000635982
+                        -0.027511 0.019881
+                        0.36596 0.019881
+                        0.36596 0.089402
+                        0.444654 0.019881
+                        0.680737 0.019881
+                        0.680737 0.089402
+                        0.680737 0.095596
+                        0.444654 0.095596
+                        0.444654 0.026075
+                        0.709365 0.851095
+                        1.02414 0.851095
+                        0.2372 0.365119
+                        0.2372 0.851095
+                        0.158505 0.000635982
+                        0.158505 0.365119
+                        0.158505 0.851095
+                        0.473282 0.365119
+                        0.709365 0.000635982
+                        0.473282 0.851095
+                        -0.156272 0.97259
+                        1.02414 0.000635982
+                        0.57165 0.97259
+                        0.2372 0.97259
+                        0.551977 0.851095
+                        0.630671 0.000635982
+                        0.551977 0.365119
+                        -0.077577 0.365119
+                        -0.077577 0.851095
+                        0.680737 0.026075
+                        1.05342 0.365119
+                        0.444654 0.089402
+                        -0.106852 0.851095
+                        1.05342 0.000635982
+                        -0.027511 0.089402
+                        0.36596 0.026075
+                        1.07421 0.026075
+                        0.838126 0.089402
+                        1.00818 0.061246
+                        -0.209543 0.061246
+                        1.04982 0.365119
+                        0.233266 0.061246
+                        1.04982 0.000635982
+                        1.04982 0.419078
+                        0.315894 0.851095
+                        0.315894 0.365119
+                        0.630671 0.851095
+                        -0.159674 0.984825
+                        -0.159674 0.969047
+                        1.10132 0.976936
+                        0.234385 0.969047
+                        0.569336 0.969047
+                        0 0.968458
+                        0.874499 -0.043012
+                        1.38999 -0.017382
+                        1.13548 0.819534
+                        -0.74464 0.968458
+                        -1.23837 0.029714
+                        -0.238369 0
+                        0.052995 -0.238369
+                        0 0.029714
+                        0.236134 -0.043012
+                        0.751623 -0.017382
+                        0.497111 0.819534
+                        0.493728 0.968458
+                        0.052995 1
+                        -0.007635 0.028744
+                        1.02388 0.020029
+                        1.02388 0.037459
+                        0.508122 1.0244
+                        -0.003955 0.033841
+                        1.01877 0.033841
+                        0.507407 1.01237
+                    </float_array>
+                    <technique_common>
+                        <accessor count="119" source="#Geometry-con_dirt_01-Texture-array" stride="2">
+                            <param name="S" type="float" />
+                            <param name="T" type="float" />
+                        </accessor>
+                    </technique_common>
+                </source>
+                <vertices id="Geometry-con_dirt_01-vertices">
+                    <input semantic="POSITION" source="#Geometry-con_dirt_01-positions" />
+                </vertices>
+                <polylist count="114" material="Material-con_dirt_01">
+                    <input semantic="VERTEX" source="#Geometry-con_dirt_01-vertices" offset="0" />
+                    <input semantic="NORMAL" source="#Geometry-con_dirt_01-normals" offset="1" />
+                    <input semantic="TEXCOORD" source="#Geometry-con_dirt_01-Texture" offset="2" set="0" />
+                    <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+                    <p>2 0 0 0 0 1 1 0 2 2 1 3 3 1 4 4 1 5 5 2 3 4 2 4 1 2 5 8 3 0 6 3 1 7 3 2 8 4 6 9 4 7 10 4 8 11 5 3 10 5 4 7 5 5 14 6 9 12 6 10 13 6 9 17 7 11 15 7 12 16 7 13 19 8 14 17 8 15 18 8 16 15 9 17 20 9 18 21 9 19 24 9 20 22 9 18 23 9 19 26 7 21 24 7 22 25 7 23 28 8 24 26 8 25 27 8 26 22 10 22 28 10 27 29 10 28 32 9 20 30 9 18 31 9 19 34 7 29 32 7 30 33 7 31 36 8 24 34 8 25 35 8 26 30 10 32 36 10 33 37 10 34 40 11 24 38 11 25 39 11 35 42 10 36 40 10 37 41 10 38 44 6 20 42 6 18 43 6 39 38 7 40 44 7 41 45 7 42 48 7 43 46 7 44 47 7 45 50 11 24 48 11 15 49 11 46 52 10 47 50 10 48 51 10 49 46 6 17 52 6 18 53 6 39 56 11 24 54 11 25 55 11 35 58 10 50 56 10 51 57 10 52 60 6 20 58 6 18 59 6 39 54 7 53 60 7 54 61 7 55 19 12 56 20 12 57 12 12 10 26 6 58 28 6 59 62 6 60 28 6 59 32 6 61 62 6 60 28 6 59 30 6 62 32 6 61 28 6 59 12 6 10 30 6 62 19 13 56 24 13 63 17 13 64 19 14 56 22 14 65 24 14 63 19 15 56 12 15 10 22 15 65 65 11 66 63 11 15 64 11 10 64 9 66 66 9 15 14 9 10 46 8 67 63 8 17 52 8 57 68 8 68 67 8 69 58 8 70 48 8 71 60 8 72 69 8 60 65 8 10 68 8 68 52 8 57 69 8 60 44 8 61 70 8 15 67 8 69 12 8 66 42 8 62 60 8 72 48 8 71 68 8 68 44 8 61 69 8 60 67 8 69 70 6 17 12 6 10 15 6 67 32 6 61 34 6 73 71 6 15 17 6 64 24 6 63 62 6 60 30 6 62 12 6 10 36 6 74 62 6 60 32 6 61 71 6 15 24 6 63 26 6 58 62 6 60 12 6 10 28 6 59 22 6 65 55 7 75 54 7 53 61 7 55 61 6 76 60 6 20 59 6 39 59 10 77 58 10 50 57 10 52 57 11 78 56 11 24 55 11 35 47 6 79 46 6 17 53 6 39 53 10 80 52 10 47 51 10 49 51 11 78 50 11 24 49 11 46 49 7 81 48 7 43 47 7 45 39 7 82 38 7 40 45 7 42 45 6 76 44 6 20 43 6 39 43 10 83 42 10 36 41 10 38 41 11 78 40 11 24 39 11 35 31 10 84 30 10 32 37 10 34 37 8 14 36 8 24 35 8 26 35 7 85 34 7 29 33 7 31 33 9 86 32 9 20 31 9 19 23 10 23 22 10 22 29 10 28 29 8 14 28 8 24 27 8 26 27 7 87 26 7 21 25 7 23 25 9 86 24 9 20 23 9 19 16 9 88 15 9 17 21 9 19 21 10 85 20 10 29 19 10 87 18 7 89 17 7 11 16 7 13 12 6 10 20 6 57 15 6 67 67 8 69 42 8 62 44 8 61 69 8 60 56 8 90 67 8 69 69 8 60 54 8 91 56 8 90 13 6 9 12 6 10 72 6 10 68 8 68 58 8 70 60 8 72 48 8 71 50 8 92 68 8 68 72 8 93 12 8 94 65 8 95 65 8 95 12 8 94 67 8 96 65 8 95 67 8 96 68 8 97 12 8 66 40 8 74 42 8 62 44 8 61 38 8 73 70 8 15 68 8 68 50 8 92 52 8 57 60 8 72 54 8 91 69 8 60 67 8 69 56 8 90 58 8 70 63 8 17 65 8 10 52 8 57 66 9 15 71 9 17 14 9 10 63 11 15 66 11 17 64 11 10 70 8 15 40 8 74 12 8 66 70 8 15 38 8 73 40 8 74 34 6 73 36 6 74 71 6 15 36 6 74 14 6 66 71 6 15 36 6 74 12 6 10 14 6 66 6 16 98 11 16 3 7 16 5 10 6 99 9 6 100 7 6 101 6 17 102 8 17 103 11 17 104 11 4 105 8 4 6 10 4 8 9 18 106 8 18 0 7 18 2 0 19 98 5 19 3 1 19 5 4 6 107 3 6 108 1 6 109 0 20 110 2 20 106 5 20 4 5 1 111 2 1 3 4 1 5 3 21 106 2 21 0 1 21 2 64 9 112 14 9 113 13 9 114 73 9 115 64 9 112 13 9 114 72 8 116 65 8 117 74 8 118</p>
+                </polylist>
+                <extra>
+                    <technique profile="modo401">
+                        <param sid="render" name="Render" type="Name">default</param>
+                        <param sid="dissolve" name="Dissolve" type="float">0</param>
+                        <param sid="curves" name="Render_Curves" type="bool">false</param>
+                        <param sid="radius" name="Curve_Radius" type="float">0.05</param>
+                    </technique>
+                </extra>
+            </mesh>
+        </geometry>
+    </library_geometries>
+    <library_lights>
+        <light id="Light-Render" name="Render">
+            <technique_common>
+                <ambient>
+                    <color sid="ambient_light_rgb">0.05 0.05 0.05</color>
+                </ambient>
+            </technique_common>
+        </light>
+        <light id="Light-Directional_Light" name="Directional_Light">
+            <technique_common>
+                <directional>
+                    <color sid="directional_light_rgb">1 1 1</color>
+                </directional>
+            </technique_common>
+            <extra>
+                <technique profile="modo401">
+                    <param sid="lightType" name="Light_Type" type="Name">sun_light</param>
+                    <param sid="render" name="Render" type="Name">default</param>
+                    <param sid="visible" name="Display_Visible" type="Name">default</param>
+                    <param sid="size" name="Display_Size" type="float">1</param>
+                    <param sid="dissolve" name="Dissolve" type="float">0</param>
+                    <param sid="radiance" name="Radiant_Intensity" type="float">3</param>
+                    <param sid="samples" name="Samples" type="int">64</param>
+                    <param sid="shadType" name="Shadow_Type" type="Name">raytrace</param>
+                    <param sid="shadRes" name="Shadow_Resolution" type="int">1024</param>
+                    <param sid="fast" name="Simple_Shading" type="bool">true</param>
+                    <param sid="azimuth" name="Azimuth" type="float">0</param>
+                    <param sid="clamp" name="Clamp_Intensity" type="bool">true</param>
+                    <param sid="day" name="Day" type="int">2009172</param>
+                    <param sid="elevation" name="Elevation" type="float">0</param>
+                    <param sid="haze" name="Haze" type="float">2</param>
+                    <param sid="height" name="Height" type="float">10</param>
+                    <param sid="lat" name="Latitude" type="float">0.655057</param>
+                    <param sid="lon" name="Longitude" type="float">-2.13456</param>
+                    <param sid="mapSize" name="Map_Size" type="float">2</param>
+                    <param sid="north" name="North" type="float">0</param>
+                    <param sid="radius" name="Radius" type="float">0.5</param>
+                    <param sid="spread" name="Spread" type="float">0</param>
+                    <param sid="sunPos" name="Sun_Position" type="bool">false</param>
+                    <param sid="time" name="Time" type="float">12</param>
+                    <param sid="timeZone" name="Time_Zone" type="float">-8</param>
+                    <param sid="volumetrics" name="Volumetrics" type="bool">false</param>
+                    <param sid="vdissolve" name="Volumetrics_Dissolve" type="float">0</param>
+                    <param sid="vsamples" name="Volumetric_Samples" type="int">40</param>
+                </technique>
+            </extra>
+        </light>
+    </library_lights>
+    <library_nodes id="shader_tree" name="Shader_Tree">
+        <node sid="shader_tree_render" name="Render">
+            <extra>
+                <technique profile="modo401">
+                    <param sid="first" name="Frame_Range_First" type="int">1</param>
+                    <param sid="last" name="Frame_Range_Last" type="int">120</param>
+                    <param sid="dpi" name="Frame_DPI" type="float">300</param>
+                    <param sid="resUnit" name="Resolution_Unit" type="Name">pixels</param>
+                    <param sid="pAspect" name="Frame_Pixel_Aspect_Ratio" type="float">1</param>
+                    <param sid="bucketX" name="Bucket_Width" type="int">32</param>
+                    <param sid="bucketY" name="Bucket_Height" type="int">32</param>
+                    <param sid="bktOrder" name="Bucket_Order" type="Name">hilbert</param>
+                    <param sid="bktSkip" name="Skip_Existing_Buckets" type="bool">false</param>
+                    <param sid="region" name="Render_Region" type="bool">false</param>
+                    <param sid="regX0" name="Render_Region_Left" type="float">0</param>
+                    <param sid="regX1" name="Render_Region_Right" type="float">1</param>
+                    <param sid="regY0" name="Render_Region_Top" type="float">0</param>
+                    <param sid="regY1" name="Render_Region_Bottom" type="float">1</param>
+                    <param sid="aa" name="Render_Antialiasing" type="Name">s8</param>
+                    <param sid="aaFilter" name="Render_Antialiasing_Filter" type="Name">gaussian</param>
+                    <param sid="fineRate" name="Refinement_Shading_Rate" type="float">0.25</param>
+                    <param sid="fineThresh" name="Refinement_Threshold" type="float">0.1</param>
+                    <param sid="bktRefine" name="Refine_Bucket_Borders" type="bool">false</param>
+                    <param sid="dof" name="Render_Depth_of_Field" type="bool">false</param>
+                    <param sid="mBlur" name="Render_Motion_Blur" type="bool">false</param>
+                    <param sid="stereo" name="Render_Stereoscopic" type="bool">false</param>
+                    <param sid="rayShadow" name="Ray_Tracing_Shadows" type="bool">true</param>
+                    <param sid="reflDepth" name="Reflection_Depth" type="int">8</param>
+                    <param sid="refrDepth" name="Refraction_Depth" type="int">8</param>
+                    <param sid="rayThresh" name="Ray_Threshold" type="float">0.001</param>
+                    <param sid="subdAdapt" name="Adaptive_Subdivision" type="bool">false</param>
+                    <param sid="subdRate" name="Subdivision_Rate" type="float">10</param>
+                    <param sid="dispEnable" name="Micropoly_Displacement" type="bool">true</param>
+                    <param sid="dispRate" name="Displacement_Rate" type="float">1</param>
+                    <param sid="dispRatio" name="Displacement_Ratio" type="float">4</param>
+                    <param sid="edgeMin" name="Minimum_Edge_Length" type="float">0.0001</param>
+                    <param sid="dispSmooth" name="Smooth_Positions" type="bool">true</param>
+                    <param sid="ambRad" name="Ambient_Intensity" type="float">0.05</param>
+                    <param sid="ambColor" name="Ambient_Color" type="color">1 1 1</param>
+                    <param sid="globEnable" name="Enable_Indirect_Illumination" type="bool">false</param>
+                    <param sid="globScope" name="Indirect_Illumination_Scope" type="Name">all</param>
+                    <param sid="globRays" name="Indirect_Rays" type="int">64</param>
+                    <param sid="globLimit" name="Indirect_Bounces" type="int">1</param>
+                    <param sid="globRange" name="Indirect_Range" type="float">0</param>
+                    <param sid="globSubs" name="Subsurface_Scattering" type="int">0</param>
+                    <param sid="globVols" name="Volumetrics_Affect_Indirect" type="bool">false</param>
+                    <param sid="irrCache" name="Enable_Irradiance_Caching" type="bool">true</param>
+                    <param sid="irrRays" name="Irradiance_Rays" type="int">256</param>
+                    <param sid="globSuper" name="Indirect_Supersampling" type="bool">true</param>
+                    <param sid="irrRate" name="Irradiance_Rate" type="float">2.5</param>
+                    <param sid="irrRatio" name="Irradiance_Ratio" type="float">6</param>
+                    <param sid="irrVals" name="Interpolation_Values" type="int">1</param>
+                    <param sid="irrGrads" name="Irradiance_Gradients" type="Name">both</param>
+                    <param sid="irrWalk" name="Walkthrough_Mode" type="bool">false</param>
+                    <param sid="irrLEnable" name="Load_Irradiance_before_Render" type="bool">false</param>
+                    <param sid="irrLName" name="Load_Irradiance_File" type="Name"></param>
+                    <param sid="irrSEnable" name="Save_Irradiance_after_Render" type="bool">false</param>
+                    <param sid="irrSName" name="Save_Irradiance_File" type="Name"></param>
+                    <param sid="causEnable" name="Enable_Direct_Caustics" type="bool">false</param>
+                    <param sid="causTotal" name="Caustics_Total_Photons" type="int">100000</param>
+                    <param sid="causLocal" name="Caustics_Local_Photons" type="int">32</param>
+                    <param sid="globCaus" name="Indirect_Caustics" type="Name">refraction</param>
+                </technique>
+            </extra>
+        </node>
+        <node sid="shader_tree_environment" name="Environment">
+            <extra>
+                <technique profile="modo401">
+                    <param sid="radiance" name="Environment_Intensity" type="float">1</param>
+                    <param sid="visCam" name="Environment_Visible_to_Camera" type="bool">true</param>
+                    <param sid="visInd" name="Environment_Visible_to_Indirect_Rays" type="bool">true</param>
+                    <param sid="visRefl" name="Environment_Visible_to_Reflection_Rays" type="bool">true</param>
+                    <param sid="visRefr" name="Environment_Visible_to_Refraction_Rays" type="bool">true</param>
+                </technique>
+            </extra>
+        </node>
+    </library_nodes>
+    <library_visual_scenes>
+        <visual_scene id="DefaultScene">
+            <node id="RenderNode" name="Render" type="NODE">
+                <instance_light url="#Light-Render" />
+            </node>
+            <node id="Geometry-roof_01Node" name="roof_01" type="NODE">
+                <instance_geometry url="#Geometry-roof_01">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-roof_01" target="#Material-roof_01">
+                                <bind_vertex_input semantic="Texture" input_semantic="TEXCOORD" input_set="0" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Geometry-cloth_001_cNode" name="cloth_001_c" type="NODE">
+                <instance_geometry url="#Geometry-cloth_001_c">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-cloth_001_c" target="#Material-cloth_001_c">
+                                <bind_vertex_input semantic="Texture" input_semantic="TEXCOORD" input_set="0" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Geometry-bricks_old06Node" name="bricks_old06" type="NODE">
+                <instance_geometry url="#Geometry-bricks_old06">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-bricks_old06" target="#Material-bricks_old06">
+                                <bind_vertex_input semantic="Texture" input_semantic="TEXCOORD" input_set="0" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Geometry-doorwindow_setNode" name="doorwindow_set" type="NODE">
+                <instance_geometry url="#Geometry-doorwindow_set">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-doorwindow_set" target="#Material-doorwindow_set">
+                                <bind_vertex_input semantic="Texture" input_semantic="TEXCOORD" input_set="0" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Geometry-woodPlanksNode" name="woodPlanks" type="NODE">
+                <instance_geometry url="#Geometry-woodPlanks">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-woodPlanks" target="#Material-woodPlanks">
+                                <bind_vertex_input semantic="Texture" input_semantic="TEXCOORD" input_set="0" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Geometry-con_dirt_01Node" name="con_dirt_01" type="NODE">
+                <instance_geometry url="#Geometry-con_dirt_01">
+                    <bind_material>
+                        <technique_common>
+                            <instance_material symbol="Material-con_dirt_01" target="#Material-con_dirt_01">
+                                <bind_vertex_input semantic="Texture" input_semantic="TEXCOORD" input_set="0" />
+                            </instance_material>
+                        </technique_common>
+                    </bind_material>
+                </instance_geometry>
+            </node>
+            <node id="Camera-CameraNode" name="Camera" type="NODE">
+                <translate sid="Position">0 0.75 4</translate>
+                <rotate sid="RotationZ">0 0 1 0</rotate>
+                <rotate sid="RotationY">0 1 0 0</rotate>
+                <rotate sid="RotationX">1 0 0 -5</rotate>
+                <instance_camera url="#Camera-Camera" />
+            </node>
+            <node id="bricks_old_02__Image___Texture_Node" name="bricks_old_02__Image___Texture_" type="NODE">
+                <translate sid="Position__2_">0 0 0</translate>
+                <rotate sid="Rotation__2_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__2_Y">0 1 0 0</rotate>
+                <rotate sid="Rotation__2_X">1 0 0 0</rotate>
+                <scale sid="Scale">1 1 -1</scale>
+            </node>
+            <node id="cloth_001_c__2___Image___Texture_Node" name="cloth_001_c__2___Image___Texture_" type="NODE">
+                <translate sid="Position__3_">0 0 0</translate>
+                <rotate sid="Rotation__3_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__3_Y">0 1 0 0</rotate>
+                <rotate sid="Rotation__3_X">1 0 0 0</rotate>
+                <scale sid="Scale__2_">1 1 -1</scale>
+            </node>
+            <node id="con_dirt_01__2___Image___Texture_Node" name="con_dirt_01__2___Image___Texture_" type="NODE">
+                <translate sid="Position__4_">0 0 0</translate>
+                <rotate sid="Rotation__4_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__4_Y">0 1 0 0</rotate>
+                <rotate sid="Rotation__4_X">1 0 0 0</rotate>
+                <scale sid="Scale__3_">1 1 -1</scale>
+            </node>
+            <node id="doorwindow_set__2___Image___Texture_Node" name="doorwindow_set__2___Image___Texture_" type="NODE">
+                <translate sid="Position__5_">0 0 0</translate>
+                <rotate sid="Rotation__5_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__5_Y">0 1 0 0</rotate>
+                <rotate sid="Rotation__5_X">1 0 0 0</rotate>
+                <scale sid="Scale__4_">1 1 -1</scale>
+            </node>
+            <node id="roof_01__2___Image___Texture_Node" name="roof_01__2___Image___Texture_" type="NODE">
+                <translate sid="Position__6_">0 0 0</translate>
+                <rotate sid="Rotation__6_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__6_Y">0 1 0 0</rotate>
+                <rotate sid="Rotation__6_X">1 0 0 0</rotate>
+                <scale sid="Scale__5_">1 1 -1</scale>
+            </node>
+            <node id="WoodPlanks__Image___Texture_Node" name="WoodPlanks__Image___Texture_" type="NODE">
+                <translate sid="Position__7_">0 0 0</translate>
+                <rotate sid="Rotation__7_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__7_Y">0 1 0 0</rotate>
+                <rotate sid="Rotation__7_X">1 0 0 0</rotate>
+                <scale sid="Scale__6_">1 1 -1</scale>
+            </node>
+            <node id="Light-Directional_LightNode" name="Directional_Light" type="NODE">
+                <translate sid="Position__8_">-2 2 2</translate>
+                <rotate sid="Rotation__8_Z">0 0 1 0</rotate>
+                <rotate sid="Rotation__8_Y">0 1 0 -45</rotate>
+                <rotate sid="Rotation__8_X">1 0 0 -30</rotate>
+                <instance_light url="#Light-Directional_Light" />
+            </node>
+            <extra>
+                <technique profile="modo401">
+                    <param sid="fps" name="Scene_FPS" type="float">24</param>
+                    <param sid="sceneS" name="Scene_Start_Time" type="float">0</param>
+                    <param sid="sceneE" name="Scene_End_Time" type="float">5</param>
+                    <param sid="currentS" name="Scene_Current_Start_Time" type="float">0</param>
+                    <param sid="currentE" name="Scene_Current_End_Time" type="float">5</param>
+                    <param sid="timeSys" name="Scene_Time_System" type="Name">frames</param>
+                </technique>
+            </extra>
+            <extra>
+                <technique profile="MAX3D">
+                    <frame_rate>24</frame_rate>
+                </technique>
+            </extra>
+            <extra>
+                <technique profile="MAYA">
+                    <start_time>0</start_time>
+                    <end_time>5</end_time>
+                </technique>
+            </extra>
+            <extra>
+                <technique profile="OKINO" />
+            </extra>
+            <extra>
+                <technique profile="XSI">
+                    <SI_Scene>
+                        <frame_rate>24</frame_rate>
+                    </SI_Scene>
+                </technique>
+            </extra>
+        </visual_scene>
+    </library_visual_scenes>
+    <scene>
+        <instance_visual_scene url="#DefaultScene" />
+    </scene>
+</COLLADA>
