@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89377a5c2dcb66b40af385ad8492cda9, type: 3}
+  m_Name: FPD_Archetype_01
+  m_EditorClassIdentifier: 
+  TileSets:
+  - {fileID: 11400000, guid: ebdc347ff5c181647914cdf4f7c2aeee, type: 2}
+  - {fileID: 11400000, guid: 7492bf16e7001784a83f4baa2e306aba, type: 2}
+  - {fileID: 11400000, guid: 2a2b5a4c5e6765e4d88af374a9af6e23, type: 2}
+  - {fileID: 11400000, guid: da6db427bf062084b805a12e355b6283, type: 2}
+  - {fileID: 11400000, guid: e3b2be751e785ab4c9d21787c76559f7, type: 2}
+  BranchCapTileSets: []
+  BranchCapType: 1
+  BranchingDepth:
+    Min: 1
+    Max: 2
+  BranchCount:
+    Min: 0
+    Max: 1
+  StraightenChance: 0.5
+  Unique: 1
